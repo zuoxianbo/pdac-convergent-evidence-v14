@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*.partial.json
+
+# OS
+.DS_Store
+
+# Release artifacts (regenerated on demand)
+*.zip
+
+# Secrets / local overrides
+.env

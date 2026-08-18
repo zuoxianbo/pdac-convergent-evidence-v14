@@ -1,0 +1,4174 @@
+{
+ "meta": {
+  "description": "V14 deep revision per V13-\u4fee\u7a3f.docx. Fixes the DeLong delta so ECS and STRING are evaluated on the SAME gene set (paired) -> delta-AUROC = AUC_ECS - AUC_STRING = 0.087 (the earlier 0.090 mixed two different gene sets and was an artefact). adds component-attribution nested decomposition of the E3 gain, repositions E6 as a formal negative-control experiment ('Established clinical targets are already encoded by network topology'), strengthens ECS-specific targets with STRING rank-recovery + Fisher-exact enrichment, and adds an evidence-complementarity matrix (pairwise correlation + incremental E3 gain). Central thesis: multimodal evidence is worth integrating only when the target property is conjunctive and not already encoded by a single strong predictor axis.",
+  "ecs_formula": "ECS = D*(1+ALPHA*PHI); D=weighted(STRING 0.80, mutation 0.10, IMPC 0.10); PHI=mean(5 support layers); ALPHA=0.60",
+  "n_genes": 20751,
+  "n_layers": 11,
+  "endpoints": {
+   "E1_pan_dependency": "Pan-dependency (DepMap PDAC essential)",
+   "E2_selective_dependency": "PDAC-selective dependency (per-line, 4 defs concordant)",
+   "E3_actionable_target": "Clinically actionable (essential intersect druggable)",
+   "E4_genetic_disease": "Genetic disease association (Open Targets PDAC 500) -- CONSTRUCTIVE REDUNDANCY TEST (OT genetics is an ECS component)",
+   "E5_crc_transfer": "Cross-cancer transfer (CRC essential, zero-shot)",
+   "E6_clinical_validation": "Independent clinical actionability (ClinicalTrials.gov PDAC targets) -- NEGATIVE CONTROL"
+  },
+  "e6_source": true,
+  "e6_n_genes": 35,
+  "e6_genes": [
+   "ATM",
+   "AURKA",
+   "BCL2",
+   "BRCA1",
+   "BRCA2",
+   "CDK1",
+   "CDK4",
+   "CDKN2A",
+   "CSF1R",
+   "CTLA4",
+   "CXCR4",
+   "EGFR",
+   "ERBB2",
+   "FGFR1",
+   "GATA6",
+   "IDH1",
+   "IDH2",
+   "KRAS",
+   "MAP2K1",
+   "MAPK1",
+   "MET",
+   "MTOR",
+   "MYC",
+   "PARP1",
+   "PIK3CA",
+   "PLK1",
+   "PXN",
+   "RRM1",
+   "SMAD4",
+   "SRC",
+   "STK11",
+   "TGFB1",
+   "TOP1",
+   "TP53",
+   "TYMS"
+  ]
+ },
+ "prevalence": {
+  "E1_pan_dependency": {
+   "n_pos": 4609,
+   "n_total": 18448
+  },
+  "E2_selective_dependency": {
+   "n_pos": 2854,
+   "n_total": 20751
+  },
+  "E3_actionable_target": {
+   "n_pos": 1159,
+   "n_total": 20751
+  },
+  "E4_genetic_disease": {
+   "n_pos": 500,
+   "n_total": 20751
+  },
+  "E5_crc_transfer": {
+   "n_pos": 4629,
+   "n_total": 18448
+  },
+  "E6_clinical_validation": {
+   "n_pos": 35,
+   "n_total": 20751
+  }
+ },
+ "robustness_auroc": {
+  "ECS_proposed": {
+   "E1_pan_dependency": [
+    0.6127535445996461,
+    0.603243109358298,
+    0.6227478280371519,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.5334011341741349,
+    0.5218362630337606,
+    0.5442296130806145,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.8118977879577869,
+    0.799070434562307,
+    0.8241081875523598,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.7842496692398245,
+    0.7661563979831425,
+    0.8012518461357906,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.6184620369515021,
+    0.6085849854645424,
+    0.6286641816079654,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.929376046751951,
+    0.9004470706283223,
+    0.9560849587249367,
+    1000
+   ]
+  },
+  "STRING_centrality": {
+   "E1_pan_dependency": [
+    0.6669640801191797,
+    0.657321871052702,
+    0.6766114754378697,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.5253346927225571,
+    0.5141588142263293,
+    0.5374575772786401,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.7251587188285081,
+    0.7089023882266919,
+    0.7409620636204727,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.8203595548542213,
+    0.8018269622233696,
+    0.8388837032025578,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.6731606592120201,
+    0.6627998802435955,
+    0.6825282070495351,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.9853415895382506,
+    0.9797161638007312,
+    0.9911869647800673,
+    1000
+   ]
+  },
+  "SimpleMean": {
+   "E1_pan_dependency": [
+    0.4630152363926208,
+    0.45357668179387406,
+    0.47235454067802496,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.5105546928016303,
+    0.49895318442644865,
+    0.5207735168492161,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.583492257277929,
+    0.5696256407923735,
+    0.5975757711173305,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.45204908399585203,
+    0.42911929583122715,
+    0.4753951850319775,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.464598229517903,
+    0.4551363464588425,
+    0.47357794441696605,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.5891622762254158,
+    0.5116736006479898,
+    0.6658867815045055,
+    1000
+   ]
+  },
+  "MutationFreq": {
+   "E1_pan_dependency": [
+    0.4600955359238086,
+    0.45005555966228644,
+    0.47024405165738203,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.47941516348887964,
+    0.4680901702693402,
+    0.49112896207541173,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.46853932139487314,
+    0.4516954771120383,
+    0.48537166457380876,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.5307230628152224,
+    0.5026774405760408,
+    0.5582152128995156,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.46519417248550143,
+    0.4554622638463324,
+    0.47526116073703056,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.6289339224446474,
+    0.5326733546499085,
+    0.7410780844600474,
+    1000
+   ]
+  },
+  "IMPC": {
+   "E1_pan_dependency": [
+    0.5046454567866557,
+    0.49055170114271784,
+    0.5181590733758975,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.5192437408694776,
+    0.5020213296643187,
+    0.5357350450535736,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.5363869341172518,
+    0.5127314698285418,
+    0.5591391395457072,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.5493246969816861,
+    0.5160451881289754,
+    0.585570193994526,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.5006840647363237,
+    0.4864631683168435,
+    0.5135376095431978,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.4342105263157895,
+    0.28805408451220404,
+    0.5866729729937185,
+    1000
+   ]
+  },
+  "GeneticConstraint": {
+   "E1_pan_dependency": [
+    0.40451557606303545,
+    0.39392556991271505,
+    0.4161754239598001,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.4737907611221625,
+    0.4614337958039624,
+    0.48659503010652705,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.3466004698049564,
+    0.32919826559148985,
+    0.3637122500209461,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.35802323582845996,
+    0.3277105984379345,
+    0.38613675617680493,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.4109218458340893,
+    0.40061160075711905,
+    0.4223524364267982,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.16877589518536598,
+    0.12116135962138326,
+    0.2206723132281392,
+    1000
+   ]
+  },
+  "Druggability": {
+   "E1_pan_dependency": [
+    0.5701761299528771,
+    0.5533806186720837,
+    0.5866920891602948,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.5268503008871518,
+    0.5080852380642783,
+    0.5453394840832093,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.575143511002886,
+    0.5584232236241746,
+    0.5915037259154217,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.6653212800271624,
+    0.6371030216281999,
+    0.692246573005287,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.5720831213173749,
+    0.5552851901537897,
+    0.5888395293241153,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.7450788319805952,
+    0.7193732641572208,
+    0.7607982997447832,
+    1000
+   ]
+  },
+  "DepMap_oracle": {
+   "E1_pan_dependency": [
+    0.9989316682123651,
+    null,
+    null,
+    0
+   ],
+   "E2_selective_dependency": [
+    0.7452544466440021,
+    null,
+    null,
+    0
+   ],
+   "E3_actionable_target": [
+    0.8976304437656952,
+    null,
+    null,
+    0
+   ],
+   "E4_genetic_disease": [
+    0.5232456527425355,
+    null,
+    null,
+    0
+   ],
+   "E5_crc_transfer": [
+    0.981033968288467,
+    null,
+    null,
+    0
+   ],
+   "E6_clinical_validation": [
+    0.7141936892673872,
+    null,
+    null,
+    0
+   ]
+  }
+ },
+ "robustness_auprc": {
+  "ECS_proposed": {
+   "E1_pan_dependency": [
+    0.3414594011707442,
+    0.32832470170145195,
+    0.3546389495014082,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.15725577474666552,
+    0.14979207710302875,
+    0.16584038335248946,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.20306173044411754,
+    0.1853979911139452,
+    0.2213791218096492,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.06392018846559182,
+    0.056226223030649204,
+    0.07279076890189816,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.3503225486099069,
+    0.3371902706440124,
+    0.3634727881712688,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.07165806219703831,
+    0.013641495582138343,
+    0.16294057355916403,
+    1000
+   ]
+  },
+  "STRING_centrality": {
+   "E1_pan_dependency": [
+    0.4117824306550751,
+    0.39646513477357354,
+    0.4269510048362446,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.15302190534345364,
+    0.1457814981110571,
+    0.1612815899185092,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.17563826616575617,
+    0.15794216471912007,
+    0.19501786411284214,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.14707774807912719,
+    0.11874000768666776,
+    0.18000182191962638,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.4197899486820789,
+    0.40392807266233793,
+    0.4349664334224085,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.13546673086473004,
+    0.06751240924661193,
+    0.25599606565924904,
+    1000
+   ]
+  },
+  "SimpleMean": {
+   "E1_pan_dependency": [
+    0.2260648085002187,
+    0.21781393928101844,
+    0.23430614864481997,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.13795915085118293,
+    0.1312846012282353,
+    0.14444075388820257,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.06567514007136044,
+    0.06116504490039398,
+    0.0704324799843412,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.02016373335220637,
+    0.01822182769283564,
+    0.022306876373775292,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.22833001559856292,
+    0.22002057184687487,
+    0.23673825816784527,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.0020777659808047,
+    0.0013727699778401609,
+    0.0031463506229399006,
+    1000
+   ]
+  },
+  "MutationFreq": {
+   "E1_pan_dependency": [
+    0.20886236426117488,
+    0.20071832036321,
+    0.21991343930940432,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.1390753115448595,
+    0.12812677415131324,
+    0.14442026661462212,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.05610439129581151,
+    0.051996220364581645,
+    0.06475677430740322,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.055339282189404065,
+    0.03567512773145063,
+    0.07233881190429753,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.21061627879535244,
+    0.20318649425627106,
+    0.22196719076716875,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.14989852686007096,
+    0.03518734363869263,
+    0.27310664910419835,
+    1000
+   ]
+  },
+  "IMPC": {
+   "E1_pan_dependency": [
+    0.2616898330892292,
+    0.25065094672608956,
+    0.27653143087405263,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.16245332425141992,
+    0.14792531676306353,
+    0.17180500459771375,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.0708572741787255,
+    0.06417824071429054,
+    0.08381668140743334,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.03211948754490558,
+    0.027244573054038025,
+    0.039782477695634144,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.25836086484428056,
+    0.24881910421815429,
+    0.27383676855037326,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.0033490592502440396,
+    0.001297216767019241,
+    0.010310612118374012,
+    1000
+   ]
+  },
+  "GeneticConstraint": {
+   "E1_pan_dependency": [
+    0.22645052858207418,
+    0.2179005174251215,
+    0.2353508091647867,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.14412400859269733,
+    0.13731790519410203,
+    0.15180389380209297,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.05858665264565738,
+    0.054777837979159145,
+    0.06316780206948117,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.01943227554650432,
+    0.01673919590925072,
+    0.025820756681553297,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.23323293483795712,
+    0.22413564476567072,
+    0.24292207328639928,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.0011963935658913425,
+    0.0008059919798455918,
+    0.0016484410524942703,
+    1000
+   ]
+  },
+  "Druggability": {
+   "E1_pan_dependency": [
+    0.2512699237271858,
+    0.25330342257665933,
+    0.2928504366645093,
+    1000
+   ],
+   "E2_selective_dependency": [
+    0.18317793816961553,
+    0.1525937809189027,
+    0.18223895027216994,
+    1000
+   ],
+   "E3_actionable_target": [
+    0.25884563102861907,
+    0.2516352534965072,
+    0.29256114630880403,
+    1000
+   ],
+   "E4_genetic_disease": [
+    0.06994131467724449,
+    0.06090413519813084,
+    0.08739438721442681,
+    1000
+   ],
+   "E5_crc_transfer": [
+    0.2498766277593852,
+    0.25378229360816945,
+    0.29310468661390565,
+    1000
+   ],
+   "E6_clinical_validation": [
+    0.011606715602604636,
+    0.0063731729193288456,
+    0.02628977394969736,
+    1000
+   ]
+  },
+  "DepMap_oracle": {
+   "E1_pan_dependency": [
+    0.9969513997766674,
+    null,
+    null,
+    0
+   ],
+   "E2_selective_dependency": [
+    0.26526110729124663,
+    null,
+    null,
+    0
+   ],
+   "E3_actionable_target": [
+    0.2825173441128739,
+    null,
+    null,
+    0
+   ],
+   "E4_genetic_disease": [
+    0.030918452222906966,
+    null,
+    null,
+    0
+   ],
+   "E5_crc_transfer": [
+    0.956495992805878,
+    null,
+    null,
+    0
+   ],
+   "E6_clinical_validation": [
+    0.016363008666418936,
+    null,
+    null,
+    0
+   ]
+  }
+ },
+ "best_per_endpoint": {
+  "E1_pan_dependency": {
+   "scorer": "STRING_centrality",
+   "auroc": 0.6669640801191797
+  },
+  "E2_selective_dependency": {
+   "scorer": "ECS_proposed",
+   "auroc": 0.5334011341741349
+  },
+  "E3_actionable_target": {
+   "scorer": "ECS_proposed",
+   "auroc": 0.8118977879577869
+  },
+  "E4_genetic_disease": {
+   "scorer": "STRING_centrality",
+   "auroc": 0.8203595548542213
+  },
+  "E5_crc_transfer": {
+   "scorer": "STRING_centrality",
+   "auroc": 0.6731606592120201
+  },
+  "E6_clinical_validation": {
+   "scorer": "STRING_centrality",
+   "auroc": 0.9853415895382506
+  }
+ },
+ "loo_ablation": {
+  "string_centrality": {
+   "E1_pan_dependency": {
+    "auroc_full": 0.6127535445996461,
+    "auroc_loo": 0.5249136590082998,
+    "delta": -0.08783988559134637
+   },
+   "E2_selective_dependency": {
+    "auroc_full": 0.5334011341741349,
+    "auroc_loo": 0.5176654400401078,
+    "delta": -0.01573569413402709
+   },
+   "E3_actionable_target": {
+    "auroc_full": 0.8118977879577869,
+    "auroc_loo": 0.5419895154406313,
+    "delta": -0.26990827251715555
+   },
+   "E4_genetic_disease": {
+    "auroc_full": 0.7842496692398245,
+    "auroc_loo": 0.5631947957326972,
+    "delta": -0.22105487350712738
+   },
+   "E5_crc_transfer": {
+    "auroc_full": 0.6184620369515021,
+    "auroc_loo": 0.5239464188931561,
+    "delta": -0.09451561805834607
+   },
+   "E6_clinical_validation": {
+    "auroc_full": 0.929376046751951,
+    "auroc_loo": 0.5654754515022989,
+    "delta": -0.363900595249652
+   }
+  },
+  "mutation_freq": {
+   "E1_pan_dependency": {
+    "auroc_full": 0.6127535445996461,
+    "auroc_loo": 0.6094150434259248,
+    "delta": -0.0033385011737213643
+   },
+   "E2_selective_dependency": {
+    "auroc_full": 0.5334011341741349,
+    "auroc_loo": 0.5315627202255109,
+    "delta": -0.0018384139486240514
+   },
+   "E3_actionable_target": {
+    "auroc_full": 0.8118977879577869,
+    "auroc_loo": 0.8172984593789272,
+    "delta": 0.005400671421140313
+   },
+   "E4_genetic_disease": {
+    "auroc_full": 0.7842496692398245,
+    "auroc_loo": 0.7885337902199293,
+    "delta": 0.0042841209801047775
+   },
+   "E5_crc_transfer": {
+    "auroc_full": 0.6184620369515021,
+    "auroc_loo": 0.6133341507813292,
+    "delta": -0.005127886170172902
+   },
+   "E6_clinical_validation": {
+    "auroc_full": 0.929376046751951,
+    "auroc_loo": 0.9405870525579954,
+    "delta": 0.011211005806044394
+   }
+  },
+  "impc_animal_ko": {
+   "E1_pan_dependency": {
+    "auroc_full": 0.6127535445996461,
+    "auroc_loo": 0.6208505155924026,
+    "delta": 0.008096970992756414
+   },
+   "E2_selective_dependency": {
+    "auroc_full": 0.5334011341741349,
+    "auroc_loo": 0.5316047243059611,
+    "delta": -0.001796409868173865
+   },
+   "E3_actionable_target": {
+    "auroc_full": 0.8118977879577869,
+    "auroc_loo": 0.8135759891811226,
+    "delta": 0.001678201223335729
+   },
+   "E4_genetic_disease": {
+    "auroc_full": 0.7842496692398245,
+    "auroc_loo": 0.7885601949892763,
+    "delta": 0.004310525749451788
+   },
+   "E5_crc_transfer": {
+    "auroc_full": 0.6184620369515021,
+    "auroc_loo": 0.6268958877229206,
+    "delta": 0.00843385077141845
+   },
+   "E6_clinical_validation": {
+    "auroc_full": 0.929376046751951,
+    "auroc_loo": 0.938096918456852,
+    "delta": 0.00872087170490099
+   }
+  },
+  "genetic_constraint": {
+   "E1_pan_dependency": {
+    "auroc_full": 0.6127535445996461,
+    "auroc_loo": 0.6127535445996461,
+    "delta": 0.0
+   },
+   "E2_selective_dependency": {
+    "auroc_full": 0.5334011341741349,
+    "auroc_loo": 0.5334011341741349,
+    "delta": 0.0
+   },
+   "E3_actionable_target": {
+    "auroc_full": 0.8118977879577869,
+    "auroc_loo": 0.8118977879577869,
+    "delta": 0.0
+   },
+   "E4_genetic_disease": {
+    "auroc_full": 0.7842496692398245,
+    "auroc_loo": 0.7842496692398245,
+    "delta": 0.0
+   },
+   "E5_crc_transfer": {
+    "auroc_full": 0.6184620369515021,
+    "auroc_loo": 0.6184620369515021,
+    "delta": 0.0
+   },
+   "E6_clinical_validation": {
+    "auroc_full": 0.929376046751951,
+    "auroc_loo": 0.929376046751951,
+    "delta": 0.0
+   }
+  },
+  "mouse_ko_score": {
+   "E1_pan_dependency": {
+    "auroc_full": 0.6127535445996461,
+    "auroc_loo": 0.6127535445996461,
+    "delta": 0.0
+   },
+   "E2_selective_dependency": {
+    "auroc_full": 0.5334011341741349,
+    "auroc_loo": 0.5334011341741349,
+    "delta": 0.0
+   },
+   "E3_actionable_target": {
+    "auroc_full": 0.8118977879577869,
+    "auroc_loo": 0.8118977879577869,
+    "delta": 0.0
+   },
+   "E4_genetic_disease": {
+    "auroc_full": 0.7842496692398245,
+    "auroc_loo": 0.7842496692398245,
+    "delta": 0.0
+   },
+   "E5_crc_transfer": {
+    "auroc_full": 0.6184620369515021,
+    "auroc_loo": 0.6184620369515021,
+    "delta": 0.0
+   },
+   "E6_clinical_validation": {
+    "auroc_full": 0.929376046751951,
+    "auroc_loo": 0.929376046751951,
+    "delta": 0.0
+   }
+  },
+  "cancer_driver": {
+   "E1_pan_dependency": {
+    "auroc_full": 0.6127535445996461,
+    "auroc_loo": 0.6121029760290602,
+    "delta": -0.0006505685705859854
+   },
+   "E2_selective_dependency": {
+    "auroc_full": 0.5334011341741349,
+    "auroc_loo": 0.5328269309655106,
+    "delta": -0.0005742032086243354
+   },
+   "E3_actionable_target": {
+    "auroc_full": 0.8118977879577869,
+    "auroc_loo": 0.813023230627606,
+    "delta": 0.0011254426698190656
+   },
+   "E4_genetic_disease": {
+    "auroc_full": 0.7842496692398245,
+    "auroc_loo": 0.7804483753685242,
+    "delta": -0.0038012938713003486
+   },
+   "E5_crc_transfer": {
+    "auroc_full": 0.6184620369515021,
+    "auroc_loo": 0.6176185723470095,
+    "delta": -0.0008434646044926941
+   },
+   "E6_clinical_validation": {
+    "auroc_full": 0.929376046751951,
+    "auroc_loo": 0.9206627944268253,
+    "delta": -0.008713252325125653
+   }
+  },
+  "tissue_specificity": {
+   "E1_pan_dependency": {
+    "auroc_full": 0.6127535445996461,
+    "auroc_loo": 0.6127535445996461,
+    "delta": 0.0
+   },
+   "E2_selective_dependency": {
+    "auroc_full": 0.5334011341741349,
+    "auroc_loo": 0.5334011341741349,
+    "delta": 0.0
+   },
+   "E3_actionable_target": {
+    "auroc_full": 0.8118977879577869,
+    "auroc_loo": 0.8118977879577869,
+    "delta": 0.0
+   },
+   "E4_genetic_disease": {
+    "auroc_full": 0.7842496692398245,
+    "auroc_loo": 0.7842496692398245,
+    "delta": 0.0
+   },
+   "E5_crc_transfer": {
+    "auroc_full": 0.6184620369515021,
+    "auroc_loo": 0.6184620369515021,
+    "delta": 0.0
+   },
+   "E6_clinical_validation": {
+    "auroc_full": 0.929376046751951,
+    "auroc_loo": 0.929376046751951,
+    "delta": 0.0
+   }
+  },
+  "hpa_rna_tissue_spec": {
+   "E1_pan_dependency": {
+    "auroc_full": 0.6127535445996461,
+    "auroc_loo": 0.6073405926438821,
+    "delta": -0.005412951955764078
+   },
+   "E2_selective_dependency": {
+    "auroc_full": 0.5334011341741349,
+    "auroc_loo": 0.5343761908203171,
+    "delta": 0.0009750566461821375
+   },
+   "E3_actionable_target": {
+    "auroc_full": 0.8118977879577869,
+    "auroc_loo": 0.8106061426524956,
+    "delta": -0.0012916453052912447
+   },
+   "E4_genetic_disease": {
+    "auroc_full": 0.7842496692398245,
+    "auroc_loo": 0.7766856267775104,
+    "delta": -0.0075640424623141245
+   },
+   "E5_crc_transfer": {
+    "auroc_full": 0.6184620369515021,
+    "auroc_loo": 0.6127555004365057,
+    "delta": -0.005706536514996419
+   },
+   "E6_clinical_validation": {
+    "auroc_full": 0.929376046751951,
+    "auroc_loo": 0.9228806613690624,
+    "delta": -0.006495385382888519
+   }
+  },
+  "hpa_pdac_prognostic": {
+   "E1_pan_dependency": {
+    "auroc_full": 0.6127535445996461,
+    "auroc_loo": 0.6098038014114859,
+    "delta": -0.0029497431881602143
+   },
+   "E2_selective_dependency": {
+    "auroc_full": 0.5334011341741349,
+    "auroc_loo": 0.5342355974020948,
+    "delta": 0.0008344632279598807
+   },
+   "E3_actionable_target": {
+    "auroc_full": 0.8118977879577869,
+    "auroc_loo": 0.8677742700973329,
+    "delta": 0.05587648213954599
+   },
+   "E4_genetic_disease": {
+    "auroc_full": 0.7842496692398245,
+    "auroc_loo": 0.7712193851506912,
+    "delta": -0.013030284089133315
+   },
+   "E5_crc_transfer": {
+    "auroc_full": 0.6184620369515021,
+    "auroc_loo": 0.6154776245789525,
+    "delta": -0.0029844123725496496
+   },
+   "E6_clinical_validation": {
+    "auroc_full": 0.929376046751951,
+    "auroc_loo": 0.926438370808538,
+    "delta": -0.0029376759434129873
+   }
+  },
+  "ot_genetics_pdac": {
+   "E1_pan_dependency": {
+    "auroc_full": 0.6127535445996461,
+    "auroc_loo": 0.6127222999996405,
+    "delta": -3.124460000569762e-05
+   },
+   "E2_selective_dependency": {
+    "auroc_full": 0.5334011341741349,
+    "auroc_loo": 0.5336487562379055,
+    "delta": 0.0002476220637706028
+   },
+   "E3_actionable_target": {
+    "auroc_full": 0.8118977879577869,
+    "auroc_loo": 0.8122732793280256,
+    "delta": 0.00037549137023873413
+   },
+   "E4_genetic_disease": {
+    "auroc_full": 0.7842496692398245,
+    "auroc_loo": 0.8067071392109677,
+    "delta": 0.022457469971143174
+   },
+   "E5_crc_transfer": {
+    "auroc_full": 0.6184620369515021,
+    "auroc_loo": 0.61831734258423,
+    "delta": -0.0001446943672721579
+   },
+   "E6_clinical_validation": {
+    "auroc_full": 0.929376046751951,
+    "auroc_loo": 0.9346000071268218,
+    "delta": 0.0052239603748708285
+   }
+  },
+  "druggability": {
+   "E1_pan_dependency": {
+    "auroc_full": 0.6127535445996461,
+    "auroc_loo": 0.6353172206649239,
+    "delta": 0.02256367606527776
+   },
+   "E2_selective_dependency": {
+    "auroc_full": 0.5334011341741349,
+    "auroc_loo": 0.5288399066972999,
+    "delta": -0.0045612274768350725
+   },
+   "E3_actionable_target": {
+    "auroc_full": 0.8118977879577869,
+    "auroc_loo": 0.6794468288701245,
+    "delta": -0.13245095908766236
+   },
+   "E4_genetic_disease": {
+    "auroc_full": 0.7842496692398245,
+    "auroc_loo": 0.7986383098415476,
+    "delta": 0.014388640601723068
+   },
+   "E5_crc_transfer": {
+    "auroc_full": 0.6184620369515021,
+    "auroc_loo": 0.6421508626099273,
+    "delta": 0.023688825658425117
+   },
+   "E6_clinical_validation": {
+    "auroc_full": 0.929376046751951,
+    "auroc_loo": 0.9348109610519189,
+    "delta": 0.005434914299967897
+   }
+  }
+ },
+ "incremental": {
+  "M1_STRING": {
+   "E1_pan_dependency": {
+    "auroc": 0.6669640801191797,
+    "delta_vs_STRING": 0.0
+   },
+   "E2_selective_dependency": {
+    "auroc": 0.5253346927225571,
+    "delta_vs_STRING": 0.0
+   },
+   "E3_actionable_target": {
+    "auroc": 0.7251587188285081,
+    "delta_vs_STRING": 0.0
+   },
+   "E4_genetic_disease": {
+    "auroc": 0.8203595548542213,
+    "delta_vs_STRING": 0.0
+   },
+   "E5_crc_transfer": {
+    "auroc": 0.6731606592120201,
+    "delta_vs_STRING": 0.0
+   },
+   "E6_clinical_validation": {
+    "auroc": 0.9853415895382506,
+    "delta_vs_STRING": 0.0
+   }
+  },
+  "M2_STRING_mut": {
+   "E1_pan_dependency": {
+    "auroc": 0.6611950602576459,
+    "delta_vs_STRING": -0.005769019861533886
+   },
+   "E2_selective_dependency": {
+    "auroc": 0.5265255588662464,
+    "delta_vs_STRING": 0.0011908661436893508
+   },
+   "E3_actionable_target": {
+    "auroc": 0.6992106429697809,
+    "delta_vs_STRING": -0.02594807585872727
+   },
+   "E4_genetic_disease": {
+    "auroc": 0.7912950959215983,
+    "delta_vs_STRING": -0.029064458932622994
+   },
+   "E5_crc_transfer": {
+    "auroc": 0.6701057536911804,
+    "delta_vs_STRING": -0.003054905520839646
+   },
+   "E6_clinical_validation": {
+    "auroc": 0.9470138773864135,
+    "delta_vs_STRING": -0.03832771215183706
+   }
+  },
+  "M3_STRING_mut_impc": {
+   "E1_pan_dependency": {
+    "auroc": 0.6486752178237016,
+    "delta_vs_STRING": -0.018288862295478103
+   },
+   "E2_selective_dependency": {
+    "auroc": 0.5281062401189863,
+    "delta_vs_STRING": 0.0027715473964292636
+   },
+   "E3_actionable_target": {
+    "auroc": 0.6912057942598907,
+    "delta_vs_STRING": -0.033952924568617426
+   },
+   "E4_genetic_disease": {
+    "auroc": 0.7824447083580752,
+    "delta_vs_STRING": -0.03791484649614607
+   },
+   "E5_crc_transfer": {
+    "auroc": 0.6568731661239863,
+    "delta_vs_STRING": -0.01628749308803379
+   },
+   "E6_clinical_validation": {
+    "auroc": 0.9232455546449061,
+    "delta_vs_STRING": -0.062096034893344476
+   }
+  },
+  "M4_STRING_genetics": {
+   "E1_pan_dependency": {
+    "auroc": 0.6664831857384985,
+    "delta_vs_STRING": -0.00048089438068121826
+   },
+   "E2_selective_dependency": {
+    "auroc": 0.5253929513546025,
+    "delta_vs_STRING": 5.825863204544923e-05
+   },
+   "E3_actionable_target": {
+    "auroc": 0.7252168077044885,
+    "delta_vs_STRING": 5.80888759803555e-05
+   },
+   "E4_genetic_disease": {
+    "auroc": 0.8436861401401154,
+    "delta_vs_STRING": 0.023326585285894152
+   },
+   "E5_crc_transfer": {
+    "auroc": 0.672661522703226,
+    "delta_vs_STRING": -0.0004991365087940736
+   },
+   "E6_clinical_validation": {
+    "auroc": 0.9889343515013602,
+    "delta_vs_STRING": 0.0035927619631096475
+   }
+  },
+  "M5_STRING_drug": {
+   "E1_pan_dependency": {
+    "auroc": 0.6148966768850295,
+    "delta_vs_STRING": -0.05206740323415027
+   },
+   "E2_selective_dependency": {
+    "auroc": 0.5301950123929885,
+    "delta_vs_STRING": 0.004860319670431434
+   },
+   "E3_actionable_target": {
+    "auroc": 0.8792796651192709,
+    "delta_vs_STRING": 0.15412094629076278
+   },
+   "E4_genetic_disease": {
+    "auroc": 0.7954074287900356,
+    "delta_vs_STRING": -0.02495212606418573
+   },
+   "E5_crc_transfer": {
+    "auroc": 0.6187334577918423,
+    "delta_vs_STRING": -0.05442720142017776
+   },
+   "E6_clinical_validation": {
+    "auroc": 0.9525428673537113,
+    "delta_vs_STRING": -0.032798722184539275
+   }
+  },
+  "M6_STRING_tissue": {
+   "E1_pan_dependency": {
+    "auroc": 0.6658522344777065,
+    "delta_vs_STRING": -0.0011118456414732636
+   },
+   "E2_selective_dependency": {
+    "auroc": 0.5251936182452124,
+    "delta_vs_STRING": -0.0001410744773446826
+   },
+   "E3_actionable_target": {
+    "auroc": 0.7244068687400035,
+    "delta_vs_STRING": -0.0007518500885046464
+   },
+   "E4_genetic_disease": {
+    "auroc": 0.8201736929168038,
+    "delta_vs_STRING": -0.00018586193741754187
+   },
+   "E5_crc_transfer": {
+    "auroc": 0.672274696330886,
+    "delta_vs_STRING": -0.0008859628811340725
+   },
+   "E6_clinical_validation": {
+    "auroc": 0.9850338052206639,
+    "delta_vs_STRING": -0.0003077843175867123
+   }
+  },
+  "M7_STRING_gen_drug": {
+   "E1_pan_dependency": {
+    "auroc": 0.6143142423193678,
+    "delta_vs_STRING": -0.052649837799811916
+   },
+   "E2_selective_dependency": {
+    "auroc": 0.5301063611702824,
+    "delta_vs_STRING": 0.0047716684477253635
+   },
+   "E3_actionable_target": {
+    "auroc": 0.8771032076170973,
+    "delta_vs_STRING": 0.15194448878858913
+   },
+   "E4_genetic_disease": {
+    "auroc": 0.7728395830125194,
+    "delta_vs_STRING": -0.04751997184170187
+   },
+   "E5_crc_transfer": {
+    "auroc": 0.6182892582980379,
+    "delta_vs_STRING": -0.05487140091398213
+   },
+   "E6_clinical_validation": {
+    "auroc": 0.9403729879147248,
+    "delta_vs_STRING": -0.044968601623525783
+   }
+  },
+  "M8_Full_ECS": {
+   "E1_pan_dependency": {
+    "auroc": 0.6127535445996461,
+    "delta_vs_STRING": -0.05421053551953359
+   },
+   "E2_selective_dependency": {
+    "auroc": 0.5334011341741349,
+    "delta_vs_STRING": 0.008066441451577866
+   },
+   "E3_actionable_target": {
+    "auroc": 0.8118977879577869,
+    "delta_vs_STRING": 0.08673906912927876
+   },
+   "E4_genetic_disease": {
+    "auroc": 0.7842496692398245,
+    "delta_vs_STRING": -0.036109885614396764
+   },
+   "E5_crc_transfer": {
+    "auroc": 0.6184620369515021,
+    "delta_vs_STRING": -0.054698622260517915
+   },
+   "E6_clinical_validation": {
+    "auroc": 0.929376046751951,
+    "delta_vs_STRING": -0.055965542786299616
+   }
+  }
+ },
+ "string_base_auroc": {
+  "E1_pan_dependency": 0.6669640801191797,
+  "E2_selective_dependency": 0.5253346927225571,
+  "E3_actionable_target": 0.7251587188285081,
+  "E4_genetic_disease": 0.8203595548542213,
+  "E5_crc_transfer": 0.6731606592120201,
+  "E6_clinical_validation": 0.9853415895382506
+ },
+ "component_attribution": {
+  "M1_STRING": {
+   "auroc": 0.7251587188285081,
+   "delta_vs_STRING": 0.0,
+   "delta_vs_previous": null,
+   "components": [
+    "string_centrality"
+   ]
+  },
+  "M2_STRING_druggability": {
+   "auroc": 0.8792796651192709,
+   "delta_vs_STRING": 0.15412094629076278,
+   "delta_vs_previous": 0.15412094629076278,
+   "components": [
+    "string_centrality",
+    "druggability"
+   ]
+  },
+  "M3_STRING_genetics": {
+   "auroc": 0.7252168077044885,
+   "delta_vs_STRING": 5.80888759803555e-05,
+   "delta_vs_previous": -0.15406285741478243,
+   "components": [
+    "string_centrality",
+    "ot_genetics_pdac"
+   ]
+  },
+  "M4_STRING_drug_genetics": {
+   "auroc": 0.8771032076170973,
+   "delta_vs_STRING": 0.15194448878858913,
+   "delta_vs_previous": 0.15188639991260877,
+   "components": [
+    "string_centrality",
+    "druggability",
+    "ot_genetics_pdac"
+   ]
+  },
+  "M5_STRING_drug_genetics_tissue": {
+   "auroc": 0.8758601806850034,
+   "delta_vs_STRING": 0.15070146185649524,
+   "delta_vs_previous": -0.0012430269320938825,
+   "components": [
+    "string_centrality",
+    "druggability",
+    "ot_genetics_pdac",
+    "hpa_rna_tissue_spec"
+   ]
+  },
+  "M6_Full_ECS": {
+   "auroc": 0.8118977879577869,
+   "delta_vs_STRING": 0.08673906912927876,
+   "delta_vs_previous": -0.06396239272721649,
+   "components": [
+    "string_centrality",
+    "mutation_freq",
+    "impc_animal_ko",
+    "cancer_driver",
+    "ot_genetics_pdac",
+    "druggability",
+    "hpa_pdac_prognostic",
+    "hpa_rna_tissue_spec"
+   ]
+  }
+ },
+ "delong_e3": {
+  "delta": 0.08673906912927876,
+  "ci_lo": 0.07674622467022875,
+  "ci_hi": 0.09673191358832876,
+  "p_value": 0.0,
+  "auc1": 0.8118977879577869,
+  "auc2": 0.7251587188285081,
+  "se": 0.005098390030127556
+ },
+ "bootstrap_delta_e3": [
+  0.08702217986859917,
+  0.0771601857190115,
+  0.09654008572388909
+ ],
+ "ecs_specific": {
+  "enrichment_curve": {
+   "ECS": {
+    "10": {
+     "hit": 4,
+     "expected": 0.6,
+     "fold": 6.77
+    },
+    "20": {
+     "hit": 7,
+     "expected": 1.2,
+     "fold": 5.93
+    },
+    "50": {
+     "hit": 15,
+     "expected": 3.0,
+     "fold": 5.08
+    },
+    "100": {
+     "hit": 24,
+     "expected": 5.9,
+     "fold": 4.06
+    },
+    "200": {
+     "hit": 48,
+     "expected": 11.8,
+     "fold": 4.06
+    }
+   },
+   "STRING": {
+    "10": {
+     "hit": 3,
+     "expected": 0.6,
+     "fold": 5.08
+    },
+    "20": {
+     "hit": 7,
+     "expected": 1.2,
+     "fold": 5.93
+    },
+    "50": {
+     "hit": 14,
+     "expected": 3.0,
+     "fold": 4.74
+    },
+    "100": {
+     "hit": 30,
+     "expected": 5.9,
+     "fold": 5.08
+    },
+    "200": {
+     "hit": 68,
+     "expected": 11.8,
+     "fold": 5.76
+    }
+   },
+   "SimpleMean": {
+    "10": {
+     "hit": 0,
+     "expected": 0.6,
+     "fold": 0.0
+    },
+    "20": {
+     "hit": 0,
+     "expected": 1.2,
+     "fold": 0.0
+    },
+    "50": {
+     "hit": 0,
+     "expected": 3.0,
+     "fold": 0.0
+    },
+    "100": {
+     "hit": 1,
+     "expected": 5.9,
+     "fold": 0.17
+    },
+    "200": {
+     "hit": 2,
+     "expected": 11.8,
+     "fold": 0.17
+    }
+   }
+  },
+  "venn": {
+   "top100_ECS_n": 100,
+   "top100_STRING_n": 100,
+   "ECS_and_STRING_top100": 7,
+   "ECS_actionable_top100": 24,
+   "STRING_actionable_top100": 30,
+   "ECS_specific_top100_not_top200_STRING": 85,
+   "ECS_specific_actionable_top100_not_top200_STRING": 16
+  },
+  "conv_table": [
+   {
+    "gene": "KPNA2",
+    "ecs": 1.371,
+    "string": 0.839,
+    "delta": 0.532,
+    "genetics": 0,
+    "druggability": 1.0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": true,
+    "genetic": false
+   },
+   {
+    "gene": "RSAD1",
+    "ecs": 1.365,
+    "string": 0.835,
+    "delta": 0.53,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "CENPA",
+    "ecs": 1.352,
+    "string": 0.845,
+    "delta": 0.507,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "IL18",
+    "ecs": 1.348,
+    "string": 0.843,
+    "delta": 0.506,
+    "genetics": 0,
+    "druggability": 1.0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "MRPL19",
+    "ecs": 1.341,
+    "string": 0.838,
+    "delta": 0.503,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "ALDH7A1",
+    "ecs": 1.34,
+    "string": 0.838,
+    "delta": 0.503,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "DRG1",
+    "ecs": 1.328,
+    "string": 0.809,
+    "delta": 0.519,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "SNRPD1",
+    "ecs": 1.328,
+    "string": 0.83,
+    "delta": 0.498,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "ARF6",
+    "ecs": 1.326,
+    "string": 0.829,
+    "delta": 0.497,
+    "genetics": 0,
+    "druggability": 1.0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": true,
+    "genetic": false
+   },
+   {
+    "gene": "IFI35",
+    "ecs": 1.323,
+    "string": 0.827,
+    "delta": 0.496,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "PRDX3",
+    "ecs": 1.32,
+    "string": 0.825,
+    "delta": 0.495,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "RPS27L",
+    "ecs": 1.318,
+    "string": 0.824,
+    "delta": 0.494,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "CALM2",
+    "ecs": 1.315,
+    "string": 0.822,
+    "delta": 0.493,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "MT-CYB",
+    "ecs": 1.308,
+    "string": 0.818,
+    "delta": 0.491,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "NIP7",
+    "ecs": 1.307,
+    "string": 0.817,
+    "delta": 0.49,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "KRT18",
+    "ecs": 1.303,
+    "string": 0.814,
+    "delta": 0.489,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "UBE2T",
+    "ecs": 1.301,
+    "string": 0.813,
+    "delta": 0.488,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "MT-CO2",
+    "ecs": 1.299,
+    "string": 0.812,
+    "delta": 0.487,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "ADAM10",
+    "ecs": 1.294,
+    "string": 0.809,
+    "delta": 0.485,
+    "genetics": 0,
+    "druggability": 1.0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "OASL",
+    "ecs": 1.294,
+    "string": 0.84,
+    "delta": 0.454,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "VAMP2",
+    "ecs": 1.291,
+    "string": 0.807,
+    "delta": 0.484,
+    "genetics": 0,
+    "druggability": 1.0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "RAB7A",
+    "ecs": 1.288,
+    "string": 0.805,
+    "delta": 0.483,
+    "genetics": 0,
+    "druggability": 1.0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": true,
+    "genetic": false
+   },
+   {
+    "gene": "NUP107",
+    "ecs": 1.285,
+    "string": 0.803,
+    "delta": 0.482,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "HNRNPA3",
+    "ecs": 1.285,
+    "string": 0.803,
+    "delta": 0.482,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "ITGA2B",
+    "ecs": 1.284,
+    "string": 0.802,
+    "delta": 0.481,
+    "genetics": 0,
+    "druggability": 1.0,
+    "tissue": 0,
+    "prognostic": 0,
+    "driver": 0,
+    "actionable": true,
+    "genetic": false
+   },
+   {
+    "gene": "FOXA2",
+    "ecs": 1.279,
+    "string": 0.799,
+    "delta": 0.479,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "PPIA",
+    "ecs": 1.278,
+    "string": 0.843,
+    "delta": 0.435,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "H3C10",
+    "ecs": 1.277,
+    "string": 0.798,
+    "delta": 0.479,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "EIF1",
+    "ecs": 1.277,
+    "string": 0.798,
+    "delta": 0.479,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   },
+   {
+    "gene": "CDC25C",
+    "ecs": 1.276,
+    "string": 0.798,
+    "delta": 0.479,
+    "genetics": 0,
+    "druggability": 0,
+    "tissue": 0,
+    "prognostic": 1.0,
+    "driver": 0,
+    "actionable": false,
+    "genetic": false
+   }
+  ],
+  "e3pos_rank_ecs": 4050.683982683983,
+  "e3pos_rank_string": 5652.494372294373,
+  "n_actionable": 1159,
+  "rank_recovery": {
+   "n_ecs_specific": 69,
+   "n_ecs_specific_actionable": 9,
+   "n_string_specific": 72,
+   "n_string_specific_actionable": 14,
+   "mean_string_pct_rank_ecs_spec_actionable": 10.880077917077204,
+   "max_string_pct_rank_ecs_spec_actionable": 19.845071858118438,
+   "genes_ecs_specific_actionable": [
+    "KPNA2",
+    "ARF6",
+    "RAB7A",
+    "ITGA2B",
+    "GNG2",
+    "STAMBP",
+    "RAB6A",
+    "F3",
+    "TNFRSF8"
+   ]
+  },
+  "fisher": {
+   "table": [
+    [
+     9,
+     60
+    ],
+    [
+     14,
+     58
+    ]
+   ],
+   "odds_ratio": 0.6214285714285714,
+   "p_value": 0.36519250574641887,
+   "enrichment_ratio": 0.670807453416149,
+   "ecs_specific_rate": 0.13043478260869565,
+   "string_specific_rate": 0.19444444444444445
+  }
+ },
+ "continuous_e1": {
+  "ECS_proposed": {
+   "spearman": 0.17440839937826066,
+   "n": 18264
+  },
+  "STRING_centrality": {
+   "spearman": 0.2449109099626672,
+   "n": 18116
+  },
+  "SimpleMean": {
+   "spearman": -0.026388174506102525,
+   "n": 18353
+  },
+  "MutationFreq": {
+   "spearman": -0.07291313040941887,
+   "n": 10733
+  },
+  "IMPC": {
+   "spearman": 0.01564636213153567,
+   "n": 7636
+  },
+  "GeneticConstraint": {
+   "spearman": -0.15550224485878225,
+   "n": 13621
+  },
+  "Druggability": {
+   "spearman": 0.11474959908064523,
+   "n": 4888
+  },
+  "DepMap_oracle": {
+   "spearman": 1.0,
+   "n": 18353
+  }
+ },
+ "crc_shift": {
+  "E1_pan_dependency": {
+   "ecs_auroc": 0.6127535445996461,
+   "string_auroc": 0.6669640801191797,
+   "delta": -0.05421053551953359,
+   "role": "negative_control"
+  },
+  "E2_selective_dependency": {
+   "ecs_auroc": 0.5334011341741349,
+   "string_auroc": 0.5253346927225571,
+   "delta": 0.008066441451577866,
+   "role": "weak"
+  },
+  "E3_actionable_target": {
+   "ecs_auroc": 0.8118977879577869,
+   "string_auroc": 0.7251587188285081,
+   "delta": 0.08673906912927876,
+   "role": "positive"
+  },
+  "E4_genetic_disease": {
+   "ecs_auroc": 0.7842496692398245,
+   "string_auroc": 0.8203595548542213,
+   "delta": -0.036109885614396764,
+   "role": "negative_control"
+  },
+  "E5_crc_transfer": {
+   "ecs_auroc": 0.6184620369515021,
+   "string_auroc": 0.6731606592120201,
+   "delta": -0.054698622260517915,
+   "role": "weak"
+  },
+  "E6_clinical_validation": {
+   "ecs_auroc": 0.929376046751951,
+   "string_auroc": 0.9853415895382506,
+   "delta": -0.055965542786299616,
+   "role": "negative_control"
+  }
+ },
+ "annotation_bias": {
+  "ECS_proposed": {
+   "raw_auroc": 0.8118977879577869,
+   "residualized_auroc": 0.7440601179021875,
+   "n": 20080
+  },
+  "STRING_centrality": {
+   "raw_auroc": 0.7251587188285081,
+   "residualized_auroc": 0.641980394652729,
+   "n": 19622
+  }
+ },
+ "evidence_complementarity": {
+  "layers": [
+   "string_centrality",
+   "cancer_driver",
+   "ot_genetics_pdac",
+   "druggability",
+   "hpa_pdac_prognostic",
+   "hpa_rna_tissue_spec"
+  ],
+  "pair_corr": {
+   "string_centrality": {
+    "string_centrality": 1.0,
+    "cancer_driver": NaN,
+    "ot_genetics_pdac": 0.153,
+    "druggability": 0.481,
+    "hpa_pdac_prognostic": 0.012,
+    "hpa_rna_tissue_spec": -0.032
+   },
+   "cancer_driver": {
+    "string_centrality": NaN,
+    "cancer_driver": NaN,
+    "ot_genetics_pdac": NaN,
+    "druggability": NaN,
+    "hpa_pdac_prognostic": NaN,
+    "hpa_rna_tissue_spec": null
+   },
+   "ot_genetics_pdac": {
+    "string_centrality": 0.153,
+    "cancer_driver": NaN,
+    "ot_genetics_pdac": 1.0,
+    "druggability": 0.013,
+    "hpa_pdac_prognostic": -0.022,
+    "hpa_rna_tissue_spec": 0.469
+   },
+   "druggability": {
+    "string_centrality": 0.481,
+    "cancer_driver": NaN,
+    "ot_genetics_pdac": 0.013,
+    "druggability": 1.0,
+    "hpa_pdac_prognostic": 0.027,
+    "hpa_rna_tissue_spec": 0.099
+   },
+   "hpa_pdac_prognostic": {
+    "string_centrality": 0.012,
+    "cancer_driver": NaN,
+    "ot_genetics_pdac": -0.022,
+    "druggability": 0.027,
+    "hpa_pdac_prognostic": 1.0,
+    "hpa_rna_tissue_spec": -0.036
+   },
+   "hpa_rna_tissue_spec": {
+    "string_centrality": -0.032,
+    "cancer_driver": null,
+    "ot_genetics_pdac": 0.469,
+    "druggability": 0.099,
+    "hpa_pdac_prognostic": -0.036,
+    "hpa_rna_tissue_spec": 1.0
+   }
+  },
+  "pair_gain": {
+   "string_centrality|cancer_driver": 0.0006,
+   "string_centrality|ot_genetics_pdac": -0.0106,
+   "string_centrality|druggability": -0.0148,
+   "string_centrality|hpa_pdac_prognostic": -0.0344,
+   "string_centrality|hpa_rna_tissue_spec": 0.0034,
+   "cancer_driver|ot_genetics_pdac": -0.0002,
+   "cancer_driver|druggability": 0.1512,
+   "cancer_driver|hpa_pdac_prognostic": -0.0209,
+   "cancer_driver|hpa_rna_tissue_spec": -0.0007,
+   "ot_genetics_pdac|druggability": 0.1519,
+   "ot_genetics_pdac|hpa_pdac_prognostic": -0.0224,
+   "ot_genetics_pdac|hpa_rna_tissue_spec": -0.0006,
+   "druggability|hpa_pdac_prognostic": 0.0939,
+   "druggability|hpa_rna_tissue_spec": 0.1523,
+   "hpa_pdac_prognostic|hpa_rna_tissue_spec": -0.0217
+  },
+  "support_corr_with_string": {
+   "cancer_driver": NaN,
+   "ot_genetics_pdac": 0.153,
+   "druggability": 0.481,
+   "hpa_pdac_prognostic": 0.012,
+   "hpa_rna_tissue_spec": -0.032
+  },
+  "support_incremental_gain": {
+   "cancer_driver": 0.0,
+   "ot_genetics_pdac": 0.0001,
+   "druggability": 0.1541,
+   "hpa_pdac_prognostic": -0.0222,
+   "hpa_rna_tissue_spec": -0.0008
+  }
+ },
+ "orthogonality": {
+  "string_centrality": {
+   "string_centrality": 1.0,
+   "mutation_freq": 0.089,
+   "impc_animal_ko": 0.116,
+   "genetic_constraint": -0.406,
+   "mouse_ko_score": -0.284,
+   "cancer_driver": NaN,
+   "tissue_specificity": -0.264,
+   "hpa_rna_tissue_spec": -0.032,
+   "hpa_pdac_prognostic": 0.012,
+   "ot_genetics_pdac": 0.153,
+   "druggability": 0.481
+  },
+  "mutation_freq": {
+   "string_centrality": 0.089,
+   "mutation_freq": 1.0,
+   "impc_animal_ko": 0.037,
+   "genetic_constraint": -0.104,
+   "mouse_ko_score": -0.057,
+   "cancer_driver": NaN,
+   "tissue_specificity": 0.036,
+   "hpa_rna_tissue_spec": -0.008,
+   "hpa_pdac_prognostic": -0.01,
+   "ot_genetics_pdac": 0.54,
+   "druggability": 0.024
+  },
+  "impc_animal_ko": {
+   "string_centrality": 0.116,
+   "mutation_freq": 0.037,
+   "impc_animal_ko": 1.0,
+   "genetic_constraint": -0.191,
+   "mouse_ko_score": -0.32,
+   "cancer_driver": NaN,
+   "tissue_specificity": -0.079,
+   "hpa_rna_tissue_spec": -0.036,
+   "hpa_pdac_prognostic": -0.011,
+   "ot_genetics_pdac": 0.06,
+   "druggability": 0.067
+  },
+  "genetic_constraint": {
+   "string_centrality": -0.406,
+   "mutation_freq": -0.104,
+   "impc_animal_ko": -0.191,
+   "genetic_constraint": 1.0,
+   "mouse_ko_score": 0.208,
+   "cancer_driver": NaN,
+   "tissue_specificity": 0.303,
+   "hpa_rna_tissue_spec": 0.096,
+   "hpa_pdac_prognostic": 0.016,
+   "ot_genetics_pdac": -0.003,
+   "druggability": -0.226
+  },
+  "mouse_ko_score": {
+   "string_centrality": -0.284,
+   "mutation_freq": -0.057,
+   "impc_animal_ko": -0.32,
+   "genetic_constraint": 0.208,
+   "mouse_ko_score": 1.0,
+   "cancer_driver": NaN,
+   "tissue_specificity": 0.061,
+   "hpa_rna_tissue_spec": 0.017,
+   "hpa_pdac_prognostic": 0.011,
+   "ot_genetics_pdac": -0.114,
+   "druggability": -0.194
+  },
+  "cancer_driver": {
+   "string_centrality": NaN,
+   "mutation_freq": NaN,
+   "impc_animal_ko": NaN,
+   "genetic_constraint": NaN,
+   "mouse_ko_score": NaN,
+   "cancer_driver": NaN,
+   "tissue_specificity": NaN,
+   "hpa_rna_tissue_spec": null,
+   "hpa_pdac_prognostic": NaN,
+   "ot_genetics_pdac": NaN,
+   "druggability": NaN
+  },
+  "tissue_specificity": {
+   "string_centrality": -0.264,
+   "mutation_freq": 0.036,
+   "impc_animal_ko": -0.079,
+   "genetic_constraint": 0.303,
+   "mouse_ko_score": 0.061,
+   "cancer_driver": NaN,
+   "tissue_specificity": 1.0,
+   "hpa_rna_tissue_spec": 0.118,
+   "hpa_pdac_prognostic": 0.034,
+   "ot_genetics_pdac": -0.104,
+   "druggability": -0.186
+  },
+  "hpa_rna_tissue_spec": {
+   "string_centrality": -0.032,
+   "mutation_freq": -0.008,
+   "impc_animal_ko": -0.036,
+   "genetic_constraint": 0.096,
+   "mouse_ko_score": 0.017,
+   "cancer_driver": null,
+   "tissue_specificity": 0.118,
+   "hpa_rna_tissue_spec": 1.0,
+   "hpa_pdac_prognostic": -0.036,
+   "ot_genetics_pdac": 0.469,
+   "druggability": 0.099
+  },
+  "hpa_pdac_prognostic": {
+   "string_centrality": 0.012,
+   "mutation_freq": -0.01,
+   "impc_animal_ko": -0.011,
+   "genetic_constraint": 0.016,
+   "mouse_ko_score": 0.011,
+   "cancer_driver": NaN,
+   "tissue_specificity": 0.034,
+   "hpa_rna_tissue_spec": -0.036,
+   "hpa_pdac_prognostic": 1.0,
+   "ot_genetics_pdac": -0.022,
+   "druggability": 0.027
+  },
+  "ot_genetics_pdac": {
+   "string_centrality": 0.153,
+   "mutation_freq": 0.54,
+   "impc_animal_ko": 0.06,
+   "genetic_constraint": -0.003,
+   "mouse_ko_score": -0.114,
+   "cancer_driver": NaN,
+   "tissue_specificity": -0.104,
+   "hpa_rna_tissue_spec": 0.469,
+   "hpa_pdac_prognostic": -0.022,
+   "ot_genetics_pdac": 1.0,
+   "druggability": 0.013
+  },
+  "druggability": {
+   "string_centrality": 0.481,
+   "mutation_freq": 0.024,
+   "impc_animal_ko": 0.067,
+   "genetic_constraint": -0.226,
+   "mouse_ko_score": -0.194,
+   "cancer_driver": NaN,
+   "tissue_specificity": -0.186,
+   "hpa_rna_tissue_spec": 0.099,
+   "hpa_pdac_prognostic": 0.027,
+   "ot_genetics_pdac": 0.013,
+   "druggability": 1.0
+  }
+ },
+ "redundancy": {
+  "string_centrality": NaN,
+  "mutation_freq": NaN,
+  "impc_animal_ko": NaN,
+  "genetic_constraint": NaN,
+  "mouse_ko_score": NaN,
+  "cancer_driver": NaN,
+  "tissue_specificity": NaN,
+  "hpa_rna_tissue_spec": 0.899,
+  "hpa_pdac_prognostic": NaN,
+  "ot_genetics_pdac": NaN,
+  "druggability": NaN
+ },
+ "permutation": {
+  "observed": 0.8118977879577869,
+  "null_mean": 0.6376503974496848,
+  "null_ci": [
+   0.6264667713234136,
+   0.6484045108780748
+  ],
+  "p_ge_observed": 0.0
+ },
+ "all_metrics": {
+  "ECS_proposed": {
+   "E1_pan_dependency": {
+    "n_total": 18357,
+    "n_pos": 4554,
+    "prevalence": 0.24807975159339762,
+    "auroc": 0.6127535445996461,
+    "auroc_ci": [
+     0.6127535445996461,
+     0.603243109358298,
+     0.6227478280371519,
+     1000
+    ],
+    "auprc": 0.3414594011707442,
+    "auprc_ci": [
+     0.3414594011707442,
+     0.32832470170145195,
+     0.3546389495014082,
+     1000
+    ],
+    "ndcg100": 0.6784477844570469,
+    "precision50": 0.68,
+    "precision100": 0.65,
+    "ece": 0.40760442941494346,
+    "top_genes": [
+     "CDK1",
+     "YWHAZ",
+     "TP53",
+     "MRPS10",
+     "NPM1",
+     "SUMO1",
+     "MRPL16",
+     "KPNA2",
+     "RSAD1",
+     "RPS15A",
+     "FEN1",
+     "MRPL11",
+     "KRAS",
+     "CENPA",
+     "IL18"
+    ]
+   },
+   "E2_selective_dependency": {
+    "n_total": 20080,
+    "n_pos": 2833,
+    "prevalence": 0.14108565737051793,
+    "auroc": 0.5334011341741349,
+    "auroc_ci": [
+     0.5334011341741349,
+     0.5218362630337606,
+     0.5442296130806145,
+     1000
+    ],
+    "auprc": 0.15725577474666552,
+    "auprc_ci": [
+     0.15725577474666552,
+     0.14979207710302875,
+     0.16584038335248946,
+     1000
+    ],
+    "ndcg100": 0.23826671463821997,
+    "precision50": 0.24,
+    "precision100": 0.23,
+    "ece": 0.48641580394213907,
+    "top_genes": [
+     "CDK1",
+     "YWHAZ",
+     "TP53",
+     "MRPS10",
+     "NPM1",
+     "SUMO1",
+     "MRPL16",
+     "KPNA2",
+     "RSAD1",
+     "RPS15A",
+     "FEN1",
+     "MRPL11",
+     "KRAS",
+     "CENPA",
+     "IL18"
+    ]
+   },
+   "E3_actionable_target": {
+    "n_total": 19622,
+    "n_pos": 1155,
+    "prevalence": 0.05886250127408012,
+    "auroc": 0.8118977879577869,
+    "auroc_ci": [
+     0.8118977879577869,
+     0.799070434562307,
+     0.8241081875523598,
+     1000
+    ],
+    "auprc": 0.20306173044411754,
+    "auprc_ci": [
+     0.20306173044411754,
+     0.1853979911139452,
+     0.2213791218096492,
+     1000
+    ],
+    "ndcg100": 0.2752786685649592,
+    "precision50": 0.3,
+    "precision100": 0.24,
+    "ece": 0.582476029173758,
+    "top_genes": [
+     "CDK1",
+     "YWHAZ",
+     "TP53",
+     "MRPS10",
+     "NPM1",
+     "SUMO1",
+     "MRPL16",
+     "KPNA2",
+     "RSAD1",
+     "RPS15A",
+     "FEN1",
+     "MRPL11",
+     "KRAS",
+     "CENPA",
+     "IL18"
+    ]
+   },
+   "E4_genetic_disease": {
+    "n_total": 20080,
+    "n_pos": 490,
+    "prevalence": 0.02440239043824701,
+    "auroc": 0.7842496692398245,
+    "auroc_ci": [
+     0.7842496692398245,
+     0.7661563979831425,
+     0.8012518461357906,
+     1000
+    ],
+    "auprc": 0.06392018846559182,
+    "auprc_ci": [
+     0.06392018846559182,
+     0.056226223030649204,
+     0.07279076890189816,
+     1000
+    ],
+    "ndcg100": 0.05405469065960937,
+    "precision50": 0.06,
+    "precision100": 0.04,
+    "ece": 0.5958362207775676,
+    "top_genes": [
+     "CDK1",
+     "YWHAZ",
+     "TP53",
+     "MRPS10",
+     "NPM1",
+     "SUMO1",
+     "MRPL16",
+     "KPNA2",
+     "RSAD1",
+     "RPS15A",
+     "FEN1",
+     "MRPL11",
+     "KRAS",
+     "CENPA",
+     "IL18"
+    ]
+   },
+   "E5_crc_transfer": {
+    "n_total": 18357,
+    "n_pos": 4586,
+    "prevalence": 0.24982295582066785,
+    "auroc": 0.6184620369515021,
+    "auroc_ci": [
+     0.6184620369515021,
+     0.6085849854645424,
+     0.6286641816079654,
+     1000
+    ],
+    "auprc": 0.3503225486099069,
+    "auprc_ci": [
+     0.3503225486099069,
+     0.3371902706440124,
+     0.3634727881712688,
+     1000
+    ],
+    "ndcg100": 0.72929026834441,
+    "precision50": 0.76,
+    "precision100": 0.7,
+    "ece": 0.4066849550020962,
+    "top_genes": [
+     "CDK1",
+     "YWHAZ",
+     "TP53",
+     "MRPS10",
+     "NPM1",
+     "SUMO1",
+     "MRPL16",
+     "KPNA2",
+     "RSAD1",
+     "RPS15A",
+     "FEN1",
+     "MRPL11",
+     "KRAS",
+     "CENPA",
+     "IL18"
+    ]
+   },
+   "E6_clinical_validation": {
+    "n_total": 20080,
+    "n_pos": 35,
+    "prevalence": 0.0017430278884462151,
+    "auroc": 0.929376046751951,
+    "auroc_ci": [
+     0.929376046751951,
+     0.9004470706283223,
+     0.9560849587249367,
+     1000
+    ],
+    "auprc": 0.07165806219703831,
+    "auprc_ci": [
+     0.07165806219703831,
+     0.013641495582138343,
+     0.16294057355916403,
+     1000
+    ],
+    "ndcg100": 0.17374961571407463,
+    "precision50": 0.06,
+    "precision100": 0.03,
+    "ece": 0.6165035514548584,
+    "top_genes": [
+     "CDK1",
+     "YWHAZ",
+     "TP53",
+     "MRPS10",
+     "NPM1",
+     "SUMO1",
+     "MRPL16",
+     "KPNA2",
+     "RSAD1",
+     "RPS15A",
+     "FEN1",
+     "MRPL11",
+     "KRAS",
+     "CENPA",
+     "IL18"
+    ]
+   }
+  },
+  "STRING_centrality": {
+   "E1_pan_dependency": {
+    "n_total": 18206,
+    "n_pos": 4525,
+    "prevalence": 0.24854443590025266,
+    "auroc": 0.6669640801191797,
+    "auroc_ci": [
+     0.6669640801191797,
+     0.657321871052702,
+     0.6766114754378697,
+     1000
+    ],
+    "auprc": 0.4117824306550751,
+    "auprc_ci": [
+     0.4117824306550751,
+     0.39646513477357354,
+     0.4269510048362446,
+     1000
+    ],
+    "ndcg100": 0.5006348872712498,
+    "precision50": 0.4,
+    "precision100": 0.48,
+    "ece": 0.4439669061692052,
+    "top_genes": [
+     "GAPDH",
+     "TP53",
+     "ACTB",
+     "AKT1",
+     "MYC",
+     "CTNNB1",
+     "EGFR",
+     "TNF",
+     "INS",
+     "ALB",
+     "SRC",
+     "HSP90AA1",
+     "JUN",
+     "HSP90AB1",
+     "IL6"
+    ]
+   },
+   "E2_selective_dependency": {
+    "n_total": 19622,
+    "n_pos": 2814,
+    "prevalence": 0.143410457649577,
+    "auroc": 0.5253346927225571,
+    "auroc_ci": [
+     0.5253346927225571,
+     0.5141588142263293,
+     0.5374575772786401,
+     1000
+    ],
+    "auprc": 0.15302190534345364,
+    "auprc_ci": [
+     0.15302190534345364,
+     0.1457814981110571,
+     0.1612815899185092,
+     1000
+    ],
+    "ndcg100": 0.17367413923631583,
+    "precision50": 0.16,
+    "precision100": 0.17,
+    "ece": 0.5411751669459991,
+    "top_genes": [
+     "GAPDH",
+     "TP53",
+     "ACTB",
+     "AKT1",
+     "MYC",
+     "CTNNB1",
+     "EGFR",
+     "TNF",
+     "INS",
+     "ALB",
+     "SRC",
+     "HSP90AA1",
+     "JUN",
+     "HSP90AB1",
+     "IL6"
+    ]
+   },
+   "E3_actionable_target": {
+    "n_total": 19622,
+    "n_pos": 1155,
+    "prevalence": 0.05886250127408012,
+    "auroc": 0.7251587188285081,
+    "auroc_ci": [
+     0.7251587188285081,
+     0.7089023882266919,
+     0.7409620636204727,
+     1000
+    ],
+    "auprc": 0.17563826616575617,
+    "auprc_ci": [
+     0.17563826616575617,
+     0.15794216471912007,
+     0.19501786411284214,
+     1000
+    ],
+    "ndcg100": 0.3229346363360389,
+    "precision50": 0.28,
+    "precision100": 0.3,
+    "ece": 0.6256945609588395,
+    "top_genes": [
+     "GAPDH",
+     "TP53",
+     "ACTB",
+     "AKT1",
+     "MYC",
+     "CTNNB1",
+     "EGFR",
+     "TNF",
+     "INS",
+     "ALB",
+     "SRC",
+     "HSP90AA1",
+     "JUN",
+     "HSP90AB1",
+     "IL6"
+    ]
+   },
+   "E4_genetic_disease": {
+    "n_total": 19622,
+    "n_pos": 487,
+    "prevalence": 0.024819080623789624,
+    "auroc": 0.8203595548542213,
+    "auroc_ci": [
+     0.8203595548542213,
+     0.8018269622233696,
+     0.8388837032025578,
+     1000
+    ],
+    "auprc": 0.14707774807912719,
+    "auprc_ci": [
+     0.14707774807912719,
+     0.11874000768666776,
+     0.18000182191962638,
+     1000
+    ],
+    "ndcg100": 0.41412392428405603,
+    "precision50": 0.4,
+    "precision100": 0.4,
+    "ece": 0.65973798160913,
+    "top_genes": [
+     "GAPDH",
+     "TP53",
+     "ACTB",
+     "AKT1",
+     "MYC",
+     "CTNNB1",
+     "EGFR",
+     "TNF",
+     "INS",
+     "ALB",
+     "SRC",
+     "HSP90AA1",
+     "JUN",
+     "HSP90AB1",
+     "IL6"
+    ]
+   },
+   "E5_crc_transfer": {
+    "n_total": 18206,
+    "n_pos": 4556,
+    "prevalence": 0.25024717126222124,
+    "auroc": 0.6731606592120201,
+    "auroc_ci": [
+     0.6731606592120201,
+     0.6627998802435955,
+     0.6825282070495351,
+     1000
+    ],
+    "auprc": 0.4197899486820789,
+    "auprc_ci": [
+     0.4197899486820789,
+     0.40392807266233793,
+     0.4349664334224085,
+     1000
+    ],
+    "ndcg100": 0.5200711623987726,
+    "precision50": 0.44,
+    "precision100": 0.5,
+    "ece": 0.4422570950798475,
+    "top_genes": [
+     "GAPDH",
+     "TP53",
+     "ACTB",
+     "AKT1",
+     "MYC",
+     "CTNNB1",
+     "EGFR",
+     "TNF",
+     "INS",
+     "ALB",
+     "SRC",
+     "HSP90AA1",
+     "JUN",
+     "HSP90AB1",
+     "IL6"
+    ]
+   },
+   "E6_clinical_validation": {
+    "n_total": 19622,
+    "n_pos": 35,
+    "prevalence": 0.0017837121598206095,
+    "auroc": 0.9853415895382506,
+    "auroc_ci": [
+     0.9853415895382506,
+     0.9797161638007312,
+     0.9911869647800673,
+     1000
+    ],
+    "auprc": 0.13546673086473004,
+    "auprc_ci": [
+     0.13546673086473004,
+     0.06751240924661193,
+     0.25599606565924904,
+     1000
+    ],
+    "ndcg100": 0.3458914337901446,
+    "precision50": 0.12,
+    "precision100": 0.15,
+    "ece": 0.682773350073099,
+    "top_genes": [
+     "GAPDH",
+     "TP53",
+     "ACTB",
+     "AKT1",
+     "MYC",
+     "CTNNB1",
+     "EGFR",
+     "TNF",
+     "INS",
+     "ALB",
+     "SRC",
+     "HSP90AA1",
+     "JUN",
+     "HSP90AB1",
+     "IL6"
+    ]
+   }
+  },
+  "SimpleMean": {
+   "E1_pan_dependency": {
+    "n_total": 18448,
+    "n_pos": 4584,
+    "prevalence": 0.24848222029488293,
+    "auroc": 0.4630152363926208,
+    "auroc_ci": [
+     0.4630152363926208,
+     0.45357668179387406,
+     0.47235454067802496,
+     1000
+    ],
+    "auprc": 0.2260648085002187,
+    "auprc_ci": [
+     0.2260648085002187,
+     0.21781393928101844,
+     0.23430614864481997,
+     1000
+    ],
+    "ndcg100": 0.26603441503301684,
+    "precision50": 0.36,
+    "precision100": 0.26,
+    "ece": 0.15929751900763725,
+    "top_genes": [
+     "BMAL2",
+     "POPDC1",
+     "TEKTIP1",
+     "CD300H",
+     "YWHAZ",
+     "TPRX2",
+     "NPM1",
+     "CCDC194",
+     "ALDH7A1",
+     "ARL14",
+     "CDC25C",
+     "CXCL11",
+     "IL2",
+     "HBEGF",
+     "RIPK2"
+    ]
+   },
+   "E2_selective_dependency": {
+    "n_total": 20751,
+    "n_pos": 2854,
+    "prevalence": 0.13753554045588165,
+    "auroc": 0.5105546928016303,
+    "auroc_ci": [
+     0.5105546928016303,
+     0.49895318442644865,
+     0.5207735168492161,
+     1000
+    ],
+    "auprc": 0.13795915085118293,
+    "auprc_ci": [
+     0.13795915085118293,
+     0.1312846012282353,
+     0.14444075388820257,
+     1000
+    ],
+    "ndcg100": 0.07651695984753304,
+    "precision50": 0.02,
+    "precision100": 0.1,
+    "ece": 0.25221275694522444,
+    "top_genes": [
+     "BMAL2",
+     "CD20",
+     "ENSG00000258674",
+     "ENSG00000263620",
+     "ENSG00000281039",
+     "ENSG00000284691",
+     "ENSG00000284969",
+     "IL17A/F",
+     "IL23",
+     "JAK1/2",
+     "JAK1/3",
+     "MIA-RAB4B",
+     "MSH5-SAPCD1",
+     "NEP",
+     "POPDC1"
+    ]
+   },
+   "E3_actionable_target": {
+    "n_total": 19622,
+    "n_pos": 1155,
+    "prevalence": 0.05886250127408012,
+    "auroc": 0.583492257277929,
+    "auroc_ci": [
+     0.583492257277929,
+     0.5696256407923735,
+     0.5975757711173305,
+     1000
+    ],
+    "auprc": 0.06567514007136044,
+    "auprc_ci": [
+     0.06567514007136044,
+     0.06116504490039398,
+     0.0704324799843412,
+     1000
+    ],
+    "ndcg100": 0.008187797668881456,
+    "precision50": 0.0,
+    "precision100": 0.01,
+    "ece": 0.33966037378656055,
+    "top_genes": [
+     "YWHAZ",
+     "NPM1",
+     "H3-2",
+     "ALDH7A1",
+     "ARL14",
+     "MT-CYB",
+     "MT-CO2",
+     "CDC25C",
+     "CXCL11",
+     "IL2",
+     "HBEGF",
+     "RIPK2",
+     "PVALB",
+     "CRCT1",
+     "CSNK1A1"
+    ]
+   },
+   "E4_genetic_disease": {
+    "n_total": 20751,
+    "n_pos": 500,
+    "prevalence": 0.02409522432653848,
+    "auroc": 0.45204908399585203,
+    "auroc_ci": [
+     0.45204908399585203,
+     0.42911929583122715,
+     0.4753951850319775,
+     1000
+    ],
+    "auprc": 0.02016373335220637,
+    "auprc_ci": [
+     0.02016373335220637,
+     0.01822182769283564,
+     0.022306876373775292,
+     1000
+    ],
+    "ndcg100": 0.0,
+    "precision50": 0.0,
+    "precision100": 0.0,
+    "ece": 0.36565307307456757,
+    "top_genes": [
+     "BMAL2",
+     "CD20",
+     "ENSG00000258674",
+     "ENSG00000263620",
+     "ENSG00000281039",
+     "ENSG00000284691",
+     "ENSG00000284969",
+     "IL17A/F",
+     "IL23",
+     "JAK1/2",
+     "JAK1/3",
+     "MIA-RAB4B",
+     "MSH5-SAPCD1",
+     "NEP",
+     "POPDC1"
+    ]
+   },
+   "E5_crc_transfer": {
+    "n_total": 18448,
+    "n_pos": 4608,
+    "prevalence": 0.24978317432784042,
+    "auroc": 0.464598229517903,
+    "auroc_ci": [
+     0.464598229517903,
+     0.4551363464588425,
+     0.47357794441696605,
+     1000
+    ],
+    "auprc": 0.22833001559856292,
+    "auprc_ci": [
+     0.22833001559856292,
+     0.22002057184687487,
+     0.23673825816784527,
+     1000
+    ],
+    "ndcg100": 0.2476028135229593,
+    "precision50": 0.34,
+    "precision100": 0.25,
+    "ece": 0.15712926228604146,
+    "top_genes": [
+     "BMAL2",
+     "POPDC1",
+     "TEKTIP1",
+     "CD300H",
+     "YWHAZ",
+     "TPRX2",
+     "NPM1",
+     "CCDC194",
+     "ALDH7A1",
+     "ARL14",
+     "CDC25C",
+     "CXCL11",
+     "IL2",
+     "HBEGF",
+     "RIPK2"
+    ]
+   },
+   "E6_clinical_validation": {
+    "n_total": 20751,
+    "n_pos": 35,
+    "prevalence": 0.0016866657028576937,
+    "auroc": 0.5891622762254158,
+    "auroc_ci": [
+     0.5891622762254158,
+     0.5116736006479898,
+     0.6658867815045055,
+     1000
+    ],
+    "auprc": 0.0020777659808047,
+    "auprc_ci": [
+     0.0020777659808047,
+     0.0013727699778401609,
+     0.0031463506229399006,
+     1000
+    ],
+    "ndcg100": 0.0,
+    "precision50": 0.0,
+    "precision100": 0.0,
+    "ece": 0.38724929811708336,
+    "top_genes": [
+     "BMAL2",
+     "CD20",
+     "ENSG00000258674",
+     "ENSG00000263620",
+     "ENSG00000281039",
+     "ENSG00000284691",
+     "ENSG00000284969",
+     "IL17A/F",
+     "IL23",
+     "JAK1/2",
+     "JAK1/3",
+     "MIA-RAB4B",
+     "MSH5-SAPCD1",
+     "NEP",
+     "POPDC1"
+    ]
+   }
+  },
+  "MutationFreq": {
+   "E1_pan_dependency": {
+    "n_total": 10758,
+    "n_pos": 2545,
+    "prevalence": 0.2365681353411415,
+    "auroc": 0.4600955359238086,
+    "auroc_ci": [
+     0.4600955359238086,
+     0.45005555966228644,
+     0.47024405165738203,
+     1000
+    ],
+    "auprc": 0.20886236426117488,
+    "auprc_ci": [
+     0.20886236426117488,
+     0.20071832036321,
+     0.21991343930940432,
+     1000
+    ],
+    "ndcg100": 0.13322053078445165,
+    "precision50": 0.1,
+    "precision100": 0.1,
+    "ece": 0.2321186928428598,
+    "top_genes": [
+     "KRAS",
+     "TP53",
+     "SMAD4",
+     "CDKN2A",
+     "TTN",
+     "MUC16",
+     "RNF43",
+     "GLI3",
+     "RNF213",
+     "LRP1B",
+     "RYR1",
+     "ARID1A",
+     "CACNA1B",
+     "COL5A1",
+     "FAT2"
+    ]
+   },
+   "E2_selective_dependency": {
+    "n_total": 11205,
+    "n_pos": 1622,
+    "prevalence": 0.14475680499776886,
+    "auroc": 0.47941516348887964,
+    "auroc_ci": [
+     0.47941516348887964,
+     0.4680901702693402,
+     0.49112896207541173,
+     1000
+    ],
+    "auprc": 0.1390753115448595,
+    "auprc_ci": [
+     0.1390753115448595,
+     0.12812677415131324,
+     0.14442026661462212,
+     1000
+    ],
+    "ndcg100": 0.08132191581842468,
+    "precision50": 0.04,
+    "precision100": 0.05,
+    "ece": 0.14038450575462055,
+    "top_genes": [
+     "KRAS",
+     "TP53",
+     "SMAD4",
+     "CDKN2A",
+     "TTN",
+     "MUC16",
+     "RNF43",
+     "GLI3",
+     "RNF213",
+     "LRP1B",
+     "RYR1",
+     "ARID1A",
+     "CACNA1B",
+     "COL5A1",
+     "FAT2"
+    ]
+   },
+   "E3_actionable_target": {
+    "n_total": 10955,
+    "n_pos": 689,
+    "prevalence": 0.06289365586490187,
+    "auroc": 0.46853932139487314,
+    "auroc_ci": [
+     0.46853932139487314,
+     0.4516954771120383,
+     0.48537166457380876,
+     1000
+    ],
+    "auprc": 0.05610439129581151,
+    "auprc_ci": [
+     0.05610439129581151,
+     0.051996220364581645,
+     0.06475677430740322,
+     1000
+    ],
+    "ndcg100": 0.06310993194229958,
+    "precision50": 0.02,
+    "precision100": 0.03,
+    "ece": 0.05847289908994632,
+    "top_genes": [
+     "KRAS",
+     "TP53",
+     "SMAD4",
+     "CDKN2A",
+     "TTN",
+     "MUC16",
+     "RNF43",
+     "GLI3",
+     "RNF213",
+     "LRP1B",
+     "RYR1",
+     "CACNA1B",
+     "COL5A1",
+     "RIMS2",
+     "ARID1A"
+    ]
+   },
+   "E4_genetic_disease": {
+    "n_total": 11205,
+    "n_pos": 300,
+    "prevalence": 0.02677376171352075,
+    "auroc": 0.5307230628152224,
+    "auroc_ci": [
+     0.5307230628152224,
+     0.5026774405760408,
+     0.5582152128995156,
+     1000
+    ],
+    "auprc": 0.055339282189404065,
+    "auprc_ci": [
+     0.055339282189404065,
+     0.03567512773145063,
+     0.07233881190429753,
+     1000
+    ],
+    "ndcg100": 0.20188006411533452,
+    "precision50": 0.18,
+    "precision100": 0.11,
+    "ece": 0.022052975663910634,
+    "top_genes": [
+     "KRAS",
+     "TP53",
+     "SMAD4",
+     "CDKN2A",
+     "TTN",
+     "MUC16",
+     "RNF43",
+     "GLI3",
+     "RNF213",
+     "LRP1B",
+     "RYR1",
+     "ARID1A",
+     "CACNA1B",
+     "COL5A1",
+     "FAT2"
+    ]
+   },
+   "E5_crc_transfer": {
+    "n_total": 10758,
+    "n_pos": 2533,
+    "prevalence": 0.23545268637293176,
+    "auroc": 0.46519417248550143,
+    "auroc_ci": [
+     0.46519417248550143,
+     0.4554622638463324,
+     0.47526116073703056,
+     1000
+    ],
+    "auprc": 0.21061627879535244,
+    "auprc_ci": [
+     0.21061627879535244,
+     0.20318649425627106,
+     0.22196719076716875,
+     1000
+    ],
+    "ndcg100": 0.20260203660548007,
+    "precision50": 0.18,
+    "precision100": 0.16,
+    "ece": 0.2309412744875273,
+    "top_genes": [
+     "KRAS",
+     "TP53",
+     "SMAD4",
+     "CDKN2A",
+     "TTN",
+     "MUC16",
+     "RNF43",
+     "GLI3",
+     "RNF213",
+     "LRP1B",
+     "RYR1",
+     "ARID1A",
+     "CACNA1B",
+     "COL5A1",
+     "FAT2"
+    ]
+   },
+   "E6_clinical_validation": {
+    "n_total": 11205,
+    "n_pos": 29,
+    "prevalence": 0.0025881302989736723,
+    "auroc": 0.6289339224446474,
+    "auroc_ci": [
+     0.6289339224446474,
+     0.5326733546499085,
+     0.7410780844600474,
+     1000
+    ],
+    "auprc": 0.14989852686007096,
+    "auprc_ci": [
+     0.14989852686007096,
+     0.03518734363869263,
+     0.27310664910419835,
+     1000
+    ],
+    "ndcg100": 0.3102448396348365,
+    "precision50": 0.1,
+    "precision100": 0.05,
+    "ece": 0.002343444247282511,
+    "top_genes": [
+     "KRAS",
+     "TP53",
+     "SMAD4",
+     "CDKN2A",
+     "TTN",
+     "MUC16",
+     "RNF43",
+     "GLI3",
+     "RNF213",
+     "LRP1B",
+     "RYR1",
+     "ARID1A",
+     "CACNA1B",
+     "COL5A1",
+     "FAT2"
+    ]
+   }
+  },
+  "IMPC": {
+   "E1_pan_dependency": {
+    "n_total": 7644,
+    "n_pos": 2059,
+    "prevalence": 0.2693615907901622,
+    "auroc": 0.5046454567866557,
+    "auroc_ci": [
+     0.5046454567866557,
+     0.49055170114271784,
+     0.5181590733758975,
+     1000
+    ],
+    "auprc": 0.2616898330892292,
+    "auprc_ci": [
+     0.2616898330892292,
+     0.25065094672608956,
+     0.27653143087405263,
+     1000
+    ],
+    "ndcg100": 0.25290791242338806,
+    "precision50": 0.16,
+    "precision100": 0.24,
+    "ece": 0.19655212512355372,
+    "top_genes": [
+     "AAK1",
+     "ABCB11",
+     "ABI3BP",
+     "ACHE",
+     "ACSL4",
+     "ACTG1",
+     "ACVR2A",
+     "ACVR2B",
+     "ADAM17",
+     "ADAMTS1",
+     "ADAMTS9",
+     "ADNP2",
+     "AGAP1",
+     "AGL",
+     "AGO1"
+    ]
+   },
+   "E2_selective_dependency": {
+    "n_total": 7817,
+    "n_pos": 1200,
+    "prevalence": 0.1535115773314571,
+    "auroc": 0.5192437408694776,
+    "auroc_ci": [
+     0.5192437408694776,
+     0.5020213296643187,
+     0.5357350450535736,
+     1000
+    ],
+    "auprc": 0.16245332425141992,
+    "auprc_ci": [
+     0.16245332425141992,
+     0.14792531676306353,
+     0.17180500459771375,
+     1000
+    ],
+    "ndcg100": 0.13966355450803547,
+    "precision50": 0.1,
+    "precision100": 0.15,
+    "ece": 0.22566201867724198,
+    "top_genes": [
+     "AAK1",
+     "ABCB11",
+     "ABI3BP",
+     "ACHE",
+     "ACSL4",
+     "ACTG1",
+     "ACVR2A",
+     "ACVR2B",
+     "ADAM17",
+     "ADAMTS1",
+     "ADAMTS9",
+     "ADNP2",
+     "AGAP1",
+     "AGL",
+     "AGO1"
+    ]
+   },
+   "E3_actionable_target": {
+    "n_total": 7581,
+    "n_pos": 503,
+    "prevalence": 0.06635008574066746,
+    "auroc": 0.5363869341172518,
+    "auroc_ci": [
+     0.5363869341172518,
+     0.5127314698285418,
+     0.5591391395457072,
+     1000
+    ],
+    "auprc": 0.0708572741787255,
+    "auprc_ci": [
+     0.0708572741787255,
+     0.06417824071429054,
+     0.08381668140743334,
+     1000
+    ],
+    "ndcg100": 0.06716266596641414,
+    "precision50": 0.08,
+    "precision100": 0.07,
+    "ece": 0.2763487666534758,
+    "top_genes": [
+     "SRSF5",
+     "SNX27",
+     "TARBP1",
+     "THRA",
+     "MGRN1",
+     "KRTAP1-3",
+     "PATL1",
+     "RNF187",
+     "CHRNB2",
+     "GOPC",
+     "ACTG1",
+     "NGFR",
+     "ROBO1",
+     "ZBTB46",
+     "SLC39A14"
+    ]
+   },
+   "E4_genetic_disease": {
+    "n_total": 7817,
+    "n_pos": 223,
+    "prevalence": 0.02852756812076244,
+    "auroc": 0.5493246969816861,
+    "auroc_ci": [
+     0.5493246969816861,
+     0.5160451881289754,
+     0.585570193994526,
+     1000
+    ],
+    "auprc": 0.03211948754490558,
+    "auprc_ci": [
+     0.03211948754490558,
+     0.027244573054038025,
+     0.039782477695634144,
+     1000
+    ],
+    "ndcg100": 0.0,
+    "precision50": 0.0,
+    "precision100": 0.0,
+    "ece": 0.30430827398973753,
+    "top_genes": [
+     "AAK1",
+     "ABCB11",
+     "ABI3BP",
+     "ACHE",
+     "ACSL4",
+     "ACTG1",
+     "ACVR2A",
+     "ACVR2B",
+     "ADAM17",
+     "ADAMTS1",
+     "ADAMTS9",
+     "ADNP2",
+     "AGAP1",
+     "AGL",
+     "AGO1"
+    ]
+   },
+   "E5_crc_transfer": {
+    "n_total": 7644,
+    "n_pos": 2058,
+    "prevalence": 0.2692307692307692,
+    "auroc": 0.5006840647363237,
+    "auroc_ci": [
+     0.5006840647363237,
+     0.4864631683168435,
+     0.5135376095431978,
+     1000
+    ],
+    "auprc": 0.25836086484428056,
+    "auprc_ci": [
+     0.25836086484428056,
+     0.24881910421815429,
+     0.27383676855037326,
+     1000
+    ],
+    "ndcg100": 0.2566575277529695,
+    "precision50": 0.2,
+    "precision100": 0.24,
+    "ece": 0.19720623292051864,
+    "top_genes": [
+     "AAK1",
+     "ABCB11",
+     "ABI3BP",
+     "ACHE",
+     "ACSL4",
+     "ACTG1",
+     "ACVR2A",
+     "ACVR2B",
+     "ADAM17",
+     "ADAMTS1",
+     "ADAMTS9",
+     "ADNP2",
+     "AGAP1",
+     "AGL",
+     "AGO1"
+    ]
+   },
+   "E6_clinical_validation": {
+    "n_total": 7817,
+    "n_pos": 19,
+    "prevalence": 0.002430599974414737,
+    "auroc": 0.4342105263157895,
+    "auroc_ci": [
+     0.4342105263157895,
+     0.28805408451220404,
+     0.5866729729937185,
+     1000
+    ],
+    "auprc": 0.0033490592502440396,
+    "auprc_ci": [
+     0.0033490592502440396,
+     0.001297216767019241,
+     0.010310612118374012,
+     1000
+    ],
+    "ndcg100": 0.023639259003256512,
+    "precision50": 0.0,
+    "precision100": 0.01,
+    "ece": 0.3240089264139412,
+    "top_genes": [
+     "AAK1",
+     "ABCB11",
+     "ABI3BP",
+     "ACHE",
+     "ACSL4",
+     "ACTG1",
+     "ACVR2A",
+     "ACVR2B",
+     "ADAM17",
+     "ADAMTS1",
+     "ADAMTS9",
+     "ADNP2",
+     "AGAP1",
+     "AGL",
+     "AGO1"
+    ]
+   }
+  },
+  "GeneticConstraint": {
+   "E1_pan_dependency": {
+    "n_total": 13683,
+    "n_pos": 3649,
+    "prevalence": 0.26668128334429586,
+    "auroc": 0.40451557606303545,
+    "auroc_ci": [
+     0.40451557606303545,
+     0.39392556991271505,
+     0.4161754239598001,
+     1000
+    ],
+    "auprc": 0.22645052858207418,
+    "auprc_ci": [
+     0.22645052858207418,
+     0.2179005174251215,
+     0.2353508091647867,
+     1000
+    ],
+    "ndcg100": 0.20397977942234466,
+    "precision50": 0.22,
+    "precision100": 0.23,
+    "ece": 0.3494260333831856,
+    "top_genes": [
+     "DNMT3A",
+     "LZTR1",
+     "SMAD6",
+     "MIB1",
+     "B3GALT6",
+     "MESP1",
+     "TPGS1",
+     "HES6",
+     "PUSL1",
+     "PDF",
+     "H2BC14",
+     "TPSG1",
+     "C1orf115",
+     "IL17D",
+     "H4C5"
+    ]
+   },
+   "E2_selective_dependency": {
+    "n_total": 14086,
+    "n_pos": 2166,
+    "prevalence": 0.15376970041175636,
+    "auroc": 0.4737907611221625,
+    "auroc_ci": [
+     0.4737907611221625,
+     0.4614337958039624,
+     0.48659503010652705,
+     1000
+    ],
+    "auprc": 0.14412400859269733,
+    "auprc_ci": [
+     0.14412400859269733,
+     0.13731790519410203,
+     0.15180389380209297,
+     1000
+    ],
+    "ndcg100": 0.16298519563267938,
+    "precision50": 0.16,
+    "precision100": 0.16,
+    "ece": 0.37225112477845684,
+    "top_genes": [
+     "DNMT3A",
+     "LZTR1",
+     "SMAD6",
+     "MIB1",
+     "B3GALT6",
+     "MESP1",
+     "TPGS1",
+     "HES6",
+     "PUSL1",
+     "PDF",
+     "H2BC14",
+     "TPSG1",
+     "C1orf115",
+     "IL17D",
+     "H4C5"
+    ]
+   },
+   "E3_actionable_target": {
+    "n_total": 13954,
+    "n_pos": 1130,
+    "prevalence": 0.08098036405331804,
+    "auroc": 0.3466004698049564,
+    "auroc_ci": [
+     0.3466004698049564,
+     0.32919826559148985,
+     0.3637122500209461,
+     1000
+    ],
+    "auprc": 0.05858665264565738,
+    "auprc_ci": [
+     0.05858665264565738,
+     0.054777837979159145,
+     0.06316780206948117,
+     1000
+    ],
+    "ndcg100": 0.04936267635039745,
+    "precision50": 0.04,
+    "precision100": 0.06,
+    "ece": 0.44743464480764594,
+    "top_genes": [
+     "DNMT3A",
+     "LZTR1",
+     "SMAD6",
+     "MIB1",
+     "B3GALT6",
+     "MESP1",
+     "TPGS1",
+     "HES6",
+     "PUSL1",
+     "PDF",
+     "H2BC14",
+     "TPSG1",
+     "C1orf115",
+     "IL17D",
+     "H4C5"
+    ]
+   },
+   "E4_genetic_disease": {
+    "n_total": 14086,
+    "n_pos": 359,
+    "prevalence": 0.02548629845236405,
+    "auroc": 0.35802323582845996,
+    "auroc_ci": [
+     0.35802323582845996,
+     0.3277105984379345,
+     0.38613675617680493,
+     1000
+    ],
+    "auprc": 0.01943227554650432,
+    "auprc_ci": [
+     0.01943227554650432,
+     0.01673919590925072,
+     0.025820756681553297,
+     1000
+    ],
+    "ndcg100": 0.0481548704889958,
+    "precision50": 0.06,
+    "precision100": 0.04,
+    "ece": 0.4746781198060076,
+    "top_genes": [
+     "DNMT3A",
+     "LZTR1",
+     "SMAD6",
+     "MIB1",
+     "B3GALT6",
+     "MESP1",
+     "TPGS1",
+     "HES6",
+     "PUSL1",
+     "PDF",
+     "H2BC14",
+     "TPSG1",
+     "C1orf115",
+     "IL17D",
+     "H4C5"
+    ]
+   },
+   "E5_crc_transfer": {
+    "n_total": 13683,
+    "n_pos": 3690,
+    "prevalence": 0.2696777022582767,
+    "auroc": 0.4109218458340893,
+    "auroc_ci": [
+     0.4109218458340893,
+     0.40061160075711905,
+     0.4223524364267982,
+     1000
+    ],
+    "auprc": 0.23323293483795712,
+    "auprc_ci": [
+     0.23323293483795712,
+     0.22413564476567072,
+     0.24292207328639928,
+     1000
+    ],
+    "ndcg100": 0.2792474368159328,
+    "precision50": 0.28,
+    "precision100": 0.28,
+    "ece": 0.3471604483506635,
+    "top_genes": [
+     "DNMT3A",
+     "LZTR1",
+     "SMAD6",
+     "MIB1",
+     "B3GALT6",
+     "MESP1",
+     "TPGS1",
+     "HES6",
+     "PUSL1",
+     "PDF",
+     "H2BC14",
+     "TPSG1",
+     "C1orf115",
+     "IL17D",
+     "H4C5"
+    ]
+   },
+   "E6_clinical_validation": {
+    "n_total": 14086,
+    "n_pos": 29,
+    "prevalence": 0.002058781769132472,
+    "auroc": 0.16877589518536598,
+    "auroc_ci": [
+     0.16877589518536598,
+     0.12116135962138326,
+     0.2206723132281392,
+     1000
+    ],
+    "auprc": 0.0011963935658913425,
+    "auprc_ci": [
+     0.0011963935658913425,
+     0.0008059919798455918,
+     0.0016484410524942703,
+     1000
+    ],
+    "ndcg100": 0.0,
+    "precision50": 0.0,
+    "precision100": 0.0,
+    "ece": 0.497154118045175,
+    "top_genes": [
+     "DNMT3A",
+     "LZTR1",
+     "SMAD6",
+     "MIB1",
+     "B3GALT6",
+     "MESP1",
+     "TPGS1",
+     "HES6",
+     "PUSL1",
+     "PDF",
+     "H2BC14",
+     "TPSG1",
+     "C1orf115",
+     "IL17D",
+     "H4C5"
+    ]
+   }
+  },
+  "Druggability": {
+   "E1_pan_dependency": {
+    "n_total": 4903,
+    "n_pos": 1159,
+    "prevalence": 0.23638588619212728,
+    "auroc": 0.5701761299528771,
+    "auroc_ci": [
+     0.5701761299528771,
+     0.5533806186720837,
+     0.5866920891602948,
+     1000
+    ],
+    "auprc": 0.2512699237271858,
+    "auprc_ci": [
+     0.2512699237271858,
+     0.25330342257665933,
+     0.2928504366645093,
+     1000
+    ],
+    "ndcg100": 0.14996581725228922,
+    "precision50": 0.18,
+    "precision100": 0.15,
+    "ece": 0.44312053844584953,
+    "top_genes": [
+     "A2M",
+     "AADAC",
+     "AAK1",
+     "ABAT",
+     "ABCB11",
+     "ABCC1",
+     "ABCC2",
+     "ABCC3",
+     "ABCC4",
+     "ABCC5",
+     "ABCC8",
+     "ABCC9",
+     "ABHD12",
+     "ABHD16A",
+     "ABHD5"
+    ]
+   },
+   "E2_selective_dependency": {
+    "n_total": 5188,
+    "n_pos": 810,
+    "prevalence": 0.15612952968388588,
+    "auroc": 0.5268503008871518,
+    "auroc_ci": [
+     0.5268503008871518,
+     0.5080852380642783,
+     0.5453394840832093,
+     1000
+    ],
+    "auprc": 0.18317793816961553,
+    "auprc_ci": [
+     0.18317793816961553,
+     0.1525937809189027,
+     0.18223895027216994,
+     1000
+    ],
+    "ndcg100": 0.2918629427011512,
+    "precision50": 0.26,
+    "precision100": 0.28,
+    "ece": 0.5076676946800309,
+    "top_genes": [
+     "A2M",
+     "AADAC",
+     "AAK1",
+     "ABAT",
+     "ABCB11",
+     "ABCC1",
+     "ABCC2",
+     "ABCC3",
+     "ABCC4",
+     "ABCC5",
+     "ABCC8",
+     "ABCC9",
+     "ABHD12",
+     "ABHD16A",
+     "ABHD5"
+    ]
+   },
+   "E3_actionable_target": {
+    "n_total": 4995,
+    "n_pos": 1155,
+    "prevalence": 0.23123123123123124,
+    "auroc": 0.575143511002886,
+    "auroc_ci": [
+     0.575143511002886,
+     0.5584232236241746,
+     0.5915037259154217,
+     1000
+    ],
+    "auprc": 0.25884563102861907,
+    "auprc_ci": [
+     0.25884563102861907,
+     0.2516352534965072,
+     0.29256114630880403,
+     1000
+    ],
+    "ndcg100": 0.20390327478446948,
+    "precision50": 0.18,
+    "precision100": 0.21,
+    "ece": 0.44288688688688677,
+    "top_genes": [
+     "HAAO",
+     "EWSR1",
+     "ENGASE",
+     "ME3",
+     "PPM1B",
+     "PANK2",
+     "USP30",
+     "INSRR",
+     "WIZ",
+     "F5",
+     "THRA",
+     "ABAT",
+     "PROKR2",
+     "RIPK3",
+     "TNNI3"
+    ]
+   },
+   "E4_genetic_disease": {
+    "n_total": 5188,
+    "n_pos": 238,
+    "prevalence": 0.045875096376252894,
+    "auroc": 0.6653212800271624,
+    "auroc_ci": [
+     0.6653212800271624,
+     0.6371030216281999,
+     0.692246573005287,
+     1000
+    ],
+    "auprc": 0.06994131467724449,
+    "auprc_ci": [
+     0.06994131467724449,
+     0.06090413519813084,
+     0.08739438721442681,
+     1000
+    ],
+    "ndcg100": 0.04972931035113652,
+    "precision50": 0.06,
+    "precision100": 0.05,
+    "ece": 0.6172744795682344,
+    "top_genes": [
+     "A2M",
+     "AADAC",
+     "AAK1",
+     "ABAT",
+     "ABCB11",
+     "ABCC1",
+     "ABCC2",
+     "ABCC3",
+     "ABCC4",
+     "ABCC5",
+     "ABCC8",
+     "ABCC9",
+     "ABHD12",
+     "ABHD16A",
+     "ABHD5"
+    ]
+   },
+   "E5_crc_transfer": {
+    "n_total": 4903,
+    "n_pos": 1159,
+    "prevalence": 0.23638588619212728,
+    "auroc": 0.5720831213173749,
+    "auroc_ci": [
+     0.5720831213173749,
+     0.5552851901537897,
+     0.5888395293241153,
+     1000
+    ],
+    "auprc": 0.2498766277593852,
+    "auprc_ci": [
+     0.2498766277593852,
+     0.25378229360816945,
+     0.29310468661390565,
+     1000
+    ],
+    "ndcg100": 0.12923567535503125,
+    "precision50": 0.14,
+    "precision100": 0.13,
+    "ece": 0.4431205384458495,
+    "top_genes": [
+     "A2M",
+     "AADAC",
+     "AAK1",
+     "ABAT",
+     "ABCB11",
+     "ABCC1",
+     "ABCC2",
+     "ABCC3",
+     "ABCC4",
+     "ABCC5",
+     "ABCC8",
+     "ABCC9",
+     "ABHD12",
+     "ABHD16A",
+     "ABHD5"
+    ]
+   },
+   "E6_clinical_validation": {
+    "n_total": 5188,
+    "n_pos": 27,
+    "prevalence": 0.00520431765612953,
+    "auroc": 0.7450788319805952,
+    "auroc_ci": [
+     0.7450788319805952,
+     0.7193732641572208,
+     0.7607982997447832,
+     1000
+    ],
+    "auprc": 0.011606715602604636,
+    "auprc_ci": [
+     0.011606715602604636,
+     0.0063731729193288456,
+     0.02628977394969736,
+     1000
+    ],
+    "ndcg100": 0.0,
+    "precision50": 0.0,
+    "precision100": 0.0,
+    "ece": 0.6579452582883578,
+    "top_genes": [
+     "A2M",
+     "AADAC",
+     "AAK1",
+     "ABAT",
+     "ABCB11",
+     "ABCC1",
+     "ABCC2",
+     "ABCC3",
+     "ABCC4",
+     "ABCC5",
+     "ABCC8",
+     "ABCC9",
+     "ABHD12",
+     "ABHD16A",
+     "ABHD5"
+    ]
+   }
+  },
+  "DepMap_oracle": {
+   "E1_pan_dependency": {
+    "n_total": 18353,
+    "n_pos": 4584,
+    "prevalence": 0.2497684302293903,
+    "auroc": 0.9989316682123651,
+    "auroc_ci": [
+     0.9989316682123651,
+     null,
+     null,
+     0
+    ],
+    "auprc": 0.9969513997766674,
+    "auprc_ci": [
+     0.9969513997766674,
+     null,
+     null,
+     0
+    ],
+    "ndcg100": 1.0,
+    "precision50": 1.0,
+    "precision100": 1.0,
+    "ece": 0.13310844761487686,
+    "top_genes": [
+     "SNRPD3",
+     "RPL15",
+     "RAN",
+     "HSPE1",
+     "RPL17",
+     "RRM1",
+     "PRIM2",
+     "SNRPF",
+     "PSMB3",
+     "SNRPA1",
+     "PSMA6",
+     "RPL12",
+     "PCNA",
+     "RPS8",
+     "FAU"
+    ]
+   },
+   "E2_selective_dependency": {
+    "n_total": 18353,
+    "n_pos": 2854,
+    "prevalence": 0.15550591184002616,
+    "auroc": 0.7452544466440021,
+    "auroc_ci": [
+     0.7452544466440021,
+     null,
+     null,
+     0
+    ],
+    "auprc": 0.26526110729124663,
+    "auprc_ci": [
+     0.26526110729124663,
+     null,
+     null,
+     0
+    ],
+    "ndcg100": 0.31772966143601034,
+    "precision50": 0.32,
+    "precision100": 0.29,
+    "ece": 0.09873506870907708,
+    "top_genes": [
+     "SNRPD3",
+     "RPL15",
+     "RAN",
+     "HSPE1",
+     "RPL17",
+     "RRM1",
+     "PRIM2",
+     "SNRPF",
+     "PSMB3",
+     "SNRPA1",
+     "PSMA6",
+     "RPL12",
+     "PCNA",
+     "RPS8",
+     "FAU"
+    ]
+   },
+   "E3_actionable_target": {
+    "n_total": 18116,
+    "n_pos": 1155,
+    "prevalence": 0.06375579598145285,
+    "auroc": 0.8976304437656952,
+    "auroc_ci": [
+     0.8976304437656952,
+     null,
+     null,
+     0
+    ],
+    "auprc": 0.2825173441128739,
+    "auprc_ci": [
+     0.2825173441128739,
+     null,
+     null,
+     0
+    ],
+    "ndcg100": 0.489757126137768,
+    "precision50": 0.52,
+    "precision100": 0.46,
+    "ece": 0.04762445954946812,
+    "top_genes": [
+     "SNRPD3",
+     "RPL15",
+     "RAN",
+     "HSPE1",
+     "RPL17",
+     "RRM1",
+     "PRIM2",
+     "SNRPF",
+     "PSMB3",
+     "SNRPA1",
+     "PSMA6",
+     "RPL12",
+     "PCNA",
+     "RPS8",
+     "FAU"
+    ]
+   },
+   "E4_genetic_disease": {
+    "n_total": 18353,
+    "n_pos": 491,
+    "prevalence": 0.026753119381027625,
+    "auroc": 0.5232456527425355,
+    "auroc_ci": [
+     0.5232456527425355,
+     null,
+     null,
+     0
+    ],
+    "auprc": 0.030918452222906966,
+    "auprc_ci": [
+     0.030918452222906966,
+     null,
+     null,
+     0
+    ],
+    "ndcg100": 0.0668464147183232,
+    "precision50": 0.08,
+    "precision100": 0.07,
+    "ece": 0.08048569937552198,
+    "top_genes": [
+     "SNRPD3",
+     "RPL15",
+     "RAN",
+     "HSPE1",
+     "RPL17",
+     "RRM1",
+     "PRIM2",
+     "SNRPF",
+     "PSMB3",
+     "SNRPA1",
+     "PSMA6",
+     "RPL12",
+     "PCNA",
+     "RPS8",
+     "FAU"
+    ]
+   },
+   "E5_crc_transfer": {
+    "n_total": 18353,
+    "n_pos": 4571,
+    "prevalence": 0.24906009916634883,
+    "auroc": 0.981033968288467,
+    "auroc_ci": [
+     0.981033968288467,
+     null,
+     null,
+     0
+    ],
+    "auprc": 0.956495992805878,
+    "auprc_ci": [
+     0.956495992805878,
+     null,
+     null,
+     0
+    ],
+    "ndcg100": 1.0,
+    "precision50": 1.0,
+    "precision100": 1.0,
+    "ece": 0.11992259244133575,
+    "top_genes": [
+     "SNRPD3",
+     "RPL15",
+     "RAN",
+     "HSPE1",
+     "RPL17",
+     "RRM1",
+     "PRIM2",
+     "SNRPF",
+     "PSMB3",
+     "SNRPA1",
+     "PSMA6",
+     "RPL12",
+     "PCNA",
+     "RPS8",
+     "FAU"
+    ]
+   },
+   "E6_clinical_validation": {
+    "n_total": 18353,
+    "n_pos": 35,
+    "prevalence": 0.0019070451697270202,
+    "auroc": 0.7141936892673872,
+    "auroc_ci": [
+     0.7141936892673872,
+     null,
+     null,
+     0
+    ],
+    "auprc": 0.016363008666418936,
+    "auprc_ci": [
+     0.016363008666418936,
+     null,
+     null,
+     0
+    ],
+    "ndcg100": 0.08954542308557131,
+    "precision50": 0.06,
+    "precision100": 0.04,
+    "ece": 0.09448885962180324,
+    "top_genes": [
+     "SNRPD3",
+     "RPL15",
+     "RAN",
+     "HSPE1",
+     "RPL17",
+     "RRM1",
+     "PRIM2",
+     "SNRPF",
+     "PSMB3",
+     "SNRPA1",
+     "PSMA6",
+     "RPL12",
+     "PCNA",
+     "RPS8",
+     "FAU"
+    ]
+   }
+  }
+ }
+}

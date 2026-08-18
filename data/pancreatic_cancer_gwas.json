@@ -1,0 +1,4011 @@
+{
+ "disease_key": "pancreatic_cancer",
+ "trait_zh": "胰腺癌",
+ "efo_id": "MONDO_0015278",
+ "category": "肿瘤",
+ "source": "Open Targets platform v4 (disease->target association score; GWAS+literature)",
+ "resolved_label": "familial pancreatic carcinoma",
+ "n_genes": 500,
+ "candidate_targets": [
+  {
+   "gene": "STK11",
+   "score": 0.7203,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PALB2",
+   "score": 0.7168,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TP53",
+   "score": 0.6972,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BRCA2",
+   "score": 0.6769,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KRAS",
+   "score": 0.673,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SMAD4",
+   "score": 0.6532,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BRCA1",
+   "score": 0.6279,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ATM",
+   "score": 0.5977,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CHEK2",
+   "score": 0.4779,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "C11orf65",
+   "score": 0.4738,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ACVR1B",
+   "score": 0.4542,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BRIP1",
+   "score": 0.4208,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "RABL3",
+   "score": 0.3754,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CDKN2A",
+   "score": 0.3753,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CELA3B",
+   "score": 0.372,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NALF1",
+   "score": 0.34,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NBN",
+   "score": 0.3363,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FANCE",
+   "score": 0.3357,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "POLD1",
+   "score": 0.3341,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "RBBP8",
+   "score": 0.3331,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PALLD",
+   "score": 0.2862,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FANCG",
+   "score": 0.2651,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ERCC4",
+   "score": 0.2623,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HOXB13",
+   "score": 0.2594,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BARD1",
+   "score": 0.1552,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "AKAP3",
+   "score": 0.1495,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CAV1",
+   "score": 0.1235,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "STAT3",
+   "score": 0.1179,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CD274",
+   "score": 0.1178,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "EGFR",
+   "score": 0.1177,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MYC",
+   "score": 0.1173,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MUC4",
+   "score": 0.1163,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NFKB1",
+   "score": 0.1162,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "YAP1",
+   "score": 0.1161,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MUC1",
+   "score": 0.1147,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NFE2L2",
+   "score": 0.114,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MET",
+   "score": 0.1139,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "AKT1",
+   "score": 0.1139,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HIF1A",
+   "score": 0.1137,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PTEN",
+   "score": 0.113,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LEP",
+   "score": 0.113,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CD276",
+   "score": 0.113,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MSLN",
+   "score": 0.1129,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "METTL3",
+   "score": 0.1126,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TGFB1",
+   "score": 0.1124,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TNFSF10",
+   "score": 0.1122,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CDH1",
+   "score": 0.1122,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PTK2",
+   "score": 0.112,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PROM1",
+   "score": 0.1118,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "AGR2",
+   "score": 0.1114,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LDHA",
+   "score": 0.1114,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ZEB1",
+   "score": 0.1107,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "APC",
+   "score": 0.1106,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GPC1",
+   "score": 0.1105,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FOXM1",
+   "score": 0.1105,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ERBB2",
+   "score": 0.1101,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TWIST1",
+   "score": 0.1101,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CEACAM5",
+   "score": 0.1098,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MAPK8",
+   "score": 0.1098,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CXCL12",
+   "score": 0.1097,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PKM",
+   "score": 0.1097,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GLI1",
+   "score": 0.1093,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ERBB3",
+   "score": 0.1091,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SRC",
+   "score": 0.1091,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MCL1",
+   "score": 0.109,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IGF1R",
+   "score": 0.109,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MST1R",
+   "score": 0.109,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MTOR",
+   "score": 0.1089,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ABCG2",
+   "score": 0.1089,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MALAT1",
+   "score": 0.1086,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MICA",
+   "score": 0.1084,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PRMT5",
+   "score": 0.1082,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LIF",
+   "score": 0.1082,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BMI1",
+   "score": 0.108,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IGF2BP2",
+   "score": 0.1079,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ALCAM",
+   "score": 0.1077,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TNF",
+   "score": 0.1077,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SOX2",
+   "score": 0.1076,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PAK1",
+   "score": 0.1074,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LGALS3",
+   "score": 0.1074,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "EPAS1",
+   "score": 0.1071,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BCL2",
+   "score": 0.1069,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CD8A",
+   "score": 0.1066,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HSPA5",
+   "score": 0.1066,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SPARC",
+   "score": 0.1065,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IGF2BP3",
+   "score": 0.1063,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SIRT1",
+   "score": 0.1062,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ADIPOQ",
+   "score": 0.1062,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CXCR4",
+   "score": 0.1061,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HGF",
+   "score": 0.106,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MUC16",
+   "score": 0.106,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GDF15",
+   "score": 0.1057,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GPRC5A",
+   "score": 0.1054,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SOX9",
+   "score": 0.1053,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HNF1A",
+   "score": 0.105,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PLK1",
+   "score": 0.105,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NT5E",
+   "score": 0.1049,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NR1H4",
+   "score": 0.1047,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FBP1",
+   "score": 0.1047,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ABCB1",
+   "score": 0.1046,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HSF1",
+   "score": 0.1043,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "WNT5A",
+   "score": 0.1043,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LCN2",
+   "score": 0.1042,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PAF1",
+   "score": 0.1042,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FTO",
+   "score": 0.1041,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SNAI1",
+   "score": 0.1039,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SACK1A",
+   "score": 0.1034,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "EZH2",
+   "score": 0.1033,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IL6",
+   "score": 0.1033,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MIF",
+   "score": 0.1029,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "METTL14",
+   "score": 0.1029,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IGF1",
+   "score": 0.1029,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MUC5AC",
+   "score": 0.1027,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GATA6",
+   "score": 0.1026,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "S100A8",
+   "score": 0.1026,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TRIM21",
+   "score": 0.1024,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "INS",
+   "score": 0.1022,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "RRM1",
+   "score": 0.1022,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "APLP2",
+   "score": 0.1022,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "COL11A1",
+   "score": 0.1021,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TM4SF1",
+   "score": 0.1021,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SATB1",
+   "score": 0.1019,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ANXA2",
+   "score": 0.1019,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TFCP2",
+   "score": 0.1017,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ITGA2",
+   "score": 0.1017,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PVT1",
+   "score": 0.1016,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IL17RB",
+   "score": 0.1016,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CD44",
+   "score": 0.1016,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ARID1A",
+   "score": 0.1015,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PKD1",
+   "score": 0.1012,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ITGA3",
+   "score": 0.1012,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "POSTN",
+   "score": 0.1011,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TNC",
+   "score": 0.101,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "STUB1",
+   "score": 0.101,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "VEGFA",
+   "score": 0.101,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GSK3B",
+   "score": 0.101,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PARP1",
+   "score": 0.1009,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "EPHA2",
+   "score": 0.1008,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BAP1",
+   "score": 0.1007,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "RRM2",
+   "score": 0.1007,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "POC1B",
+   "score": 0.1006,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KLF4",
+   "score": 0.1005,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "S100P",
+   "score": 0.1005,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TFRC",
+   "score": 0.1003,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FYN",
+   "score": 0.1003,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "APEX1",
+   "score": 0.1002,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ENO1",
+   "score": 0.1001,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CTHRC1",
+   "score": 0.1001,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CCN1",
+   "score": 0.1,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NOTCH1",
+   "score": 0.0998,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "WT1",
+   "score": 0.0997,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CHEK1",
+   "score": 0.0997,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PIK3CA",
+   "score": 0.0996,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PAK4",
+   "score": 0.0995,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CCDC88A",
+   "score": 0.0994,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "UCA1",
+   "score": 0.0993,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CXCL10",
+   "score": 0.099,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GAS6",
+   "score": 0.0988,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HOTTIP",
+   "score": 0.0987,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DPP4",
+   "score": 0.0987,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BTG2",
+   "score": 0.0985,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TGM2",
+   "score": 0.0982,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SOX4",
+   "score": 0.0982,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "APOA2",
+   "score": 0.0982,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IFNG",
+   "score": 0.098,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "EGR1",
+   "score": 0.098,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FOXO3",
+   "score": 0.0979,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HK2",
+   "score": 0.0979,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SNAI2",
+   "score": 0.0978,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NGFR",
+   "score": 0.0978,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FOSL1",
+   "score": 0.0978,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TOB1",
+   "score": 0.0978,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PLAU",
+   "score": 0.0977,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FOXP3",
+   "score": 0.0977,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "EP300",
+   "score": 0.0977,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IGFBP3",
+   "score": 0.0977,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MMP7",
+   "score": 0.0977,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IL17A",
+   "score": 0.0976,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SPHK1",
+   "score": 0.0974,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CDKN1A",
+   "score": 0.0973,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NECTIN4",
+   "score": 0.0972,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TPX2",
+   "score": 0.0971,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FBXW7",
+   "score": 0.097,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CKS1B",
+   "score": 0.0969,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CD24",
+   "score": 0.0969,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ABHD11",
+   "score": 0.0968,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "WWTR1",
+   "score": 0.0968,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BCL2L1",
+   "score": 0.0967,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SPP1",
+   "score": 0.0966,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GATA4",
+   "score": 0.0965,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NRP1",
+   "score": 0.0964,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MFN2",
+   "score": 0.0963,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PRKCI",
+   "score": 0.0963,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HOTAIR",
+   "score": 0.0963,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SCD",
+   "score": 0.0962,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DUSP28",
+   "score": 0.0962,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MMP9",
+   "score": 0.0961,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ALB",
+   "score": 0.0961,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "RNF43",
+   "score": 0.096,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "STING1",
+   "score": 0.096,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SMAD2",
+   "score": 0.0957,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SP1",
+   "score": 0.0957,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DUSP6",
+   "score": 0.0957,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HAT1",
+   "score": 0.0956,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "EZR",
+   "score": 0.0956,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "YBX1",
+   "score": 0.0956,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MYEOV",
+   "score": 0.0955,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TPT1",
+   "score": 0.0955,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "VEGFC",
+   "score": 0.0955,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CXCL1",
+   "score": 0.0954,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KRT17",
+   "score": 0.0953,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GABRP",
+   "score": 0.0953,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "AHR",
+   "score": 0.0952,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BSG",
+   "score": 0.0951,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PTTG1",
+   "score": 0.0951,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "F2R",
+   "score": 0.095,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PAK2",
+   "score": 0.0949,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MUC6",
+   "score": 0.0947,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CASC2",
+   "score": 0.0946,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ADRB2",
+   "score": 0.0945,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TNFRSF1B",
+   "score": 0.0945,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FGF2",
+   "score": 0.0944,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ARL4C",
+   "score": 0.0942,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ARHGAP4",
+   "score": 0.0942,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TMEFF2",
+   "score": 0.0941,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NR5A2",
+   "score": 0.0941,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CEMIP",
+   "score": 0.094,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "STAT5B",
+   "score": 0.0939,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GAST",
+   "score": 0.0939,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CD36",
+   "score": 0.0939,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "STYK1",
+   "score": 0.0939,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DKK3",
+   "score": 0.0939,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TM4SF5",
+   "score": 0.0938,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LOXL2",
+   "score": 0.0938,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SIRT3",
+   "score": 0.0937,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IL4",
+   "score": 0.0937,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NTSR1",
+   "score": 0.0937,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NAF1",
+   "score": 0.0936,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IL1A",
+   "score": 0.0934,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NUPR1",
+   "score": 0.0933,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CIRBP",
+   "score": 0.0933,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SIRT7",
+   "score": 0.0932,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NSD3",
+   "score": 0.0932,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KLF5",
+   "score": 0.0931,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MAP3K5",
+   "score": 0.0931,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ANLN",
+   "score": 0.0931,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LINC00511",
+   "score": 0.093,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KIFC1",
+   "score": 0.0929,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SOCS3",
+   "score": 0.0928,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KEAP1",
+   "score": 0.0928,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "RAC1",
+   "score": 0.0927,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GOT1",
+   "score": 0.0925,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "F2RL1",
+   "score": 0.0925,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "AGER",
+   "score": 0.0923,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HNF4A",
+   "score": 0.0923,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NFATC1",
+   "score": 0.0921,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "S100A4",
+   "score": 0.0921,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PDCD4",
+   "score": 0.0918,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "OAS1",
+   "score": 0.0917,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IL13RA2",
+   "score": 0.0916,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FOXC1",
+   "score": 0.0916,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TP53BP2",
+   "score": 0.0915,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KRT8",
+   "score": 0.0914,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KIT",
+   "score": 0.0913,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PLAUR",
+   "score": 0.0913,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NQO1",
+   "score": 0.0913,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DUOX2",
+   "score": 0.0912,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ATF4",
+   "score": 0.0912,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LGALS1",
+   "score": 0.0909,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "USP10",
+   "score": 0.0909,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DICER1",
+   "score": 0.0903,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HMGB1",
+   "score": 0.0901,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BNIP3",
+   "score": 0.09,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SREBF1",
+   "score": 0.0899,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CLU",
+   "score": 0.0899,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ADM",
+   "score": 0.0898,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TGFA",
+   "score": 0.0898,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SLC39A4",
+   "score": 0.0898,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SPOP",
+   "score": 0.0897,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PARK7",
+   "score": 0.0896,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NEK2",
+   "score": 0.0896,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PIN1",
+   "score": 0.0895,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FOXP1",
+   "score": 0.0894,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HDAC5",
+   "score": 0.0893,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SLC1A5",
+   "score": 0.0893,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LDLRAD3",
+   "score": 0.0893,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ELF3",
+   "score": 0.0892,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HSPB1",
+   "score": 0.0891,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DCLK1",
+   "score": 0.089,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NOX4",
+   "score": 0.089,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MIB1",
+   "score": 0.0889,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GDNF",
+   "score": 0.0889,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FGD5",
+   "score": 0.0888,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HAVCR2",
+   "score": 0.0887,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GATM",
+   "score": 0.0886,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MACC1",
+   "score": 0.0886,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MMP14",
+   "score": 0.0886,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DDIT4",
+   "score": 0.0885,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "RB1",
+   "score": 0.0885,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "USP5",
+   "score": 0.0885,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TNFSF9",
+   "score": 0.0884,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ESR1",
+   "score": 0.0883,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CALR",
+   "score": 0.0883,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SERPINE1",
+   "score": 0.0882,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ONECUT1",
+   "score": 0.0882,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NDUFS2",
+   "score": 0.0881,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CEBPD",
+   "score": 0.088,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TYMS",
+   "score": 0.088,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HEATR1",
+   "score": 0.0879,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SFRP1",
+   "score": 0.0879,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SOD2",
+   "score": 0.0879,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SHH",
+   "score": 0.0878,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IGFBP2",
+   "score": 0.0877,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "EPCAM",
+   "score": 0.0877,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NODAL",
+   "score": 0.0877,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "WDR3",
+   "score": 0.0876,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FGFR1",
+   "score": 0.0876,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SMURF1",
+   "score": 0.0875,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "S100A6",
+   "score": 0.0875,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MAP4K4",
+   "score": 0.0875,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FGFR2",
+   "score": 0.0875,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CXCR2",
+   "score": 0.0874,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LDHB",
+   "score": 0.0874,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "VASH2",
+   "score": 0.0874,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PIM3",
+   "score": 0.0872,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CD4",
+   "score": 0.0872,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DCK",
+   "score": 0.087,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GNRH1",
+   "score": 0.087,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MYOF",
+   "score": 0.0869,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ADAM8",
+   "score": 0.0869,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "POU5F1",
+   "score": 0.0868,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PRMT3",
+   "score": 0.0867,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "JAK1",
+   "score": 0.0866,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MAP1LC3A",
+   "score": 0.0865,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HMGA1",
+   "score": 0.0864,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SMAD7",
+   "score": 0.0861,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MMP28",
+   "score": 0.086,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KRT19",
+   "score": 0.0859,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NOTCH2",
+   "score": 0.0859,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NUMB",
+   "score": 0.0859,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TRIM15",
+   "score": 0.0858,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PRR11",
+   "score": 0.0858,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "XBP1",
+   "score": 0.0858,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FERMT2",
+   "score": 0.0858,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TRIM37",
+   "score": 0.0858,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SFRP2",
+   "score": 0.0857,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FASN",
+   "score": 0.0855,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "YY1",
+   "score": 0.0855,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "RAD51",
+   "score": 0.0855,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NEUROD1",
+   "score": 0.0855,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PSMD11",
+   "score": 0.0853,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CXCL5",
+   "score": 0.0853,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PERP",
+   "score": 0.0853,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SATB2",
+   "score": 0.0852,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "C3",
+   "score": 0.0852,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TLR4",
+   "score": 0.0852,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MSI2",
+   "score": 0.0851,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "VHL",
+   "score": 0.0851,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TFEB",
+   "score": 0.0851,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TCF7L2",
+   "score": 0.085,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ERN1",
+   "score": 0.0849,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PRKAA1",
+   "score": 0.0848,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "S1PR1",
+   "score": 0.0848,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DAB2IP",
+   "score": 0.0848,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "VCAM1",
+   "score": 0.0847,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CDH3",
+   "score": 0.0847,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "YTHDF3",
+   "score": 0.0847,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PPARG",
+   "score": 0.0846,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CDK5",
+   "score": 0.0845,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "AREG",
+   "score": 0.0844,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ENG",
+   "score": 0.0844,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IL20RB",
+   "score": 0.0844,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SKIL",
+   "score": 0.0842,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MEN1",
+   "score": 0.0842,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KLF3",
+   "score": 0.0842,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "RIOX2",
+   "score": 0.0841,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "OIP5",
+   "score": 0.084,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "F11R",
+   "score": 0.084,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "C3AR1",
+   "score": 0.0839,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KLF6",
+   "score": 0.0839,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CLDN1",
+   "score": 0.0839,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HDAC6",
+   "score": 0.0839,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SPRY2",
+   "score": 0.0838,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KLF12",
+   "score": 0.0838,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ERO1A",
+   "score": 0.0838,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "VTCN1",
+   "score": 0.0837,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TLR7",
+   "score": 0.0837,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KLK7",
+   "score": 0.0836,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ADAM9",
+   "score": 0.0836,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "WASL",
+   "score": 0.0836,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PDGFA",
+   "score": 0.0835,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IFIT1",
+   "score": 0.0835,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DDX60",
+   "score": 0.0835,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IL9",
+   "score": 0.0835,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "XIAP",
+   "score": 0.0835,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LRPPRC",
+   "score": 0.0834,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CCR7",
+   "score": 0.0833,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IGF2BP1",
+   "score": 0.0833,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PRMT1",
+   "score": 0.0833,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TRIM29",
+   "score": 0.0832,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CD74",
+   "score": 0.0832,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "E2F3",
+   "score": 0.0832,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "YEATS4",
+   "score": 0.0831,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LAT2",
+   "score": 0.0831,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MBOAT2",
+   "score": 0.0831,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TNFRSF6B",
+   "score": 0.083,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PRECSIT",
+   "score": 0.083,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BRD4",
+   "score": 0.0828,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CAP1",
+   "score": 0.0828,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "UBR5",
+   "score": 0.0828,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GALNT6",
+   "score": 0.0827,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KCNH2",
+   "score": 0.0827,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "OTUB1",
+   "score": 0.0827,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NES",
+   "score": 0.0827,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GINS2",
+   "score": 0.0826,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TFF1",
+   "score": 0.0826,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HLA-A",
+   "score": 0.0826,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ANK1",
+   "score": 0.0825,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PLOD1",
+   "score": 0.0824,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GHR",
+   "score": 0.0824,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "RBM15",
+   "score": 0.0824,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CCND1",
+   "score": 0.0823,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PUM1",
+   "score": 0.0823,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FOXD1",
+   "score": 0.0822,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CCNI2",
+   "score": 0.0822,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ITGB4",
+   "score": 0.0822,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ASIC1",
+   "score": 0.0822,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GREM1",
+   "score": 0.0821,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "S100A11",
+   "score": 0.0821,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CBX3",
+   "score": 0.0821,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NOP14",
+   "score": 0.0821,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "P4HA1",
+   "score": 0.082,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NOTCH3",
+   "score": 0.0819,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GFPT2",
+   "score": 0.0819,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "AHNAK2",
+   "score": 0.0819,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SMURF2",
+   "score": 0.0819,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SKP2",
+   "score": 0.0819,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NAT10",
+   "score": 0.0818,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "USP9X",
+   "score": 0.0818,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CCR4",
+   "score": 0.0818,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "TLR3",
+   "score": 0.0818,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "EGLN3",
+   "score": 0.0818,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "VTN",
+   "score": 0.0817,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "UMOD",
+   "score": 0.0817,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FTH1",
+   "score": 0.0817,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "USP8",
+   "score": 0.0817,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SEMA5A",
+   "score": 0.0816,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PSMD14",
+   "score": 0.0816,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CIP2A",
+   "score": 0.0816,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ZFP91",
+   "score": 0.0815,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ALDH1A1",
+   "score": 0.0815,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CAV2",
+   "score": 0.0815,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "EEF1A2",
+   "score": 0.0815,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PTK6",
+   "score": 0.0815,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NHERF1",
+   "score": 0.0814,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KLF9",
+   "score": 0.0813,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MSN",
+   "score": 0.0813,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ST7",
+   "score": 0.0812,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SMARCAD1",
+   "score": 0.0812,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KIF20B",
+   "score": 0.0811,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SERPINF1",
+   "score": 0.0811,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "OSBPL10",
+   "score": 0.0811,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MAPK6",
+   "score": 0.0811,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DNMT3B",
+   "score": 0.0811,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ATR",
+   "score": 0.081,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CBX7",
+   "score": 0.081,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "COL10A1",
+   "score": 0.081,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "VCP",
+   "score": 0.081,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FUBP1",
+   "score": 0.081,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PAFAH1B3",
+   "score": 0.0809,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "LRRFIP1",
+   "score": 0.0808,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "RAB5A",
+   "score": 0.0808,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "OSBPL3",
+   "score": 0.0807,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "IBSP",
+   "score": 0.0807,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MICAL2",
+   "score": 0.0807,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "SIX1",
+   "score": 0.0806,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "GJB4",
+   "score": 0.0806,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NGF",
+   "score": 0.0805,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MARCO",
+   "score": 0.0804,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "HSPA2",
+   "score": 0.0804,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CCR2",
+   "score": 0.0804,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "MECP2",
+   "score": 0.0804,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ASF1B",
+   "score": 0.0804,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "KIF20A",
+   "score": 0.0803,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FAT1",
+   "score": 0.0802,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "BHLHE40",
+   "score": 0.0802,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "FGF10",
+   "score": 0.0802,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PTGES",
+   "score": 0.0801,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "USP22",
+   "score": 0.0801,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ZFP36",
+   "score": 0.0801,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "INPP4B",
+   "score": 0.08,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PTN",
+   "score": 0.08,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CD59",
+   "score": 0.08,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "WNT7A",
+   "score": 0.08,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "ABCC1",
+   "score": 0.0798,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "NR3C1",
+   "score": 0.0798,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "PIM1",
+   "score": 0.0798,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "STOML2",
+   "score": 0.0798,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "CLCN5",
+   "score": 0.0797,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  },
+  {
+   "gene": "DIAPH3",
+   "score": 0.0797,
+   "sources": [
+    "OpenTargets_v4"
+   ],
+   "ensg": null
+  }
+ ]
+}
