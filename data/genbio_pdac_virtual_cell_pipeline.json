@@ -1,0 +1,433 @@
+{
+  "pipeline_version": "2.2.0",
+  "timestamp": "2026-07-22T07:43:45.024839",
+  "disease": "胰腺癌",
+  "n_targets": 3,
+  "target_discovery": {
+    "total_candidates": 12,
+    "top_targets": [
+      {
+        "gene": "TP53",
+        "centrality": 0.99
+      },
+      {
+        "gene": "EGFR",
+        "centrality": 0.92
+      },
+      {
+        "gene": "KRAS",
+        "centrality": 0.88
+      },
+      {
+        "gene": "CDKN2A",
+        "centrality": 0.78
+      },
+      {
+        "gene": "WNT",
+        "centrality": 0.744360559434058
+      }
+    ]
+  },
+  "multi_omics_validation": {
+    "TP53": {
+      "GWAS": "rs1042522 (P=1.5e-35)",
+      "RNA_FC": 1.8,
+      "Protein_FC": 2.2,
+      "omics_score": 0.4
+    },
+    "EGFR": {
+      "GWAS": "rs2227983 (P=1.2e-8)",
+      "RNA_FC": 3.5,
+      "Protein_FC": 5.0,
+      "omics_score": 0.85
+    },
+    "KRAS": {
+      "GWAS": "rs1137188 (P=8.5e-15)",
+      "RNA_FC": 2.0,
+      "Protein_FC": 2.5,
+      "omics_score": 0.45
+    },
+    "CDKN2A": {
+      "GWAS": "模拟GWAS",
+      "RNA_FC": 1.0,
+      "Protein_FC": 1.0,
+      "omics_score": 0.2
+    },
+    "WNT": {
+      "GWAS": "模拟GWAS",
+      "RNA_FC": 1.0,
+      "Protein_FC": 1.0,
+      "omics_score": 0.2
+    }
+  },
+  "druggability": {
+    "TP53": {
+      "gene": "TP53",
+      "target_class": "未知",
+      "target_type": "未知",
+      "total_score": 4.1,
+      "antibody_score": 3,
+      "small_mol_score": 4.3,
+      "protac_score": 3,
+      "structure_resolution": 5,
+      "binding_pocket": 4,
+      "lipinski_compliance": 5,
+      "oral_bioavailability": 4,
+      "selectivity_window": 5,
+      "safety_toxicology": 5,
+      "clinical_validation": 3.0,
+      "patent_space": 5.1,
+      "competitive_landscape": "蓝海"
+    },
+    "EGFR": {
+      "gene": "EGFR",
+      "target_class": "胞内酶",
+      "target_type": "激酶",
+      "total_score": 6.7,
+      "antibody_score": 2,
+      "small_mol_score": 8.3,
+      "protac_score": 7,
+      "structure_resolution": 9,
+      "binding_pocket": 9,
+      "lipinski_compliance": 8,
+      "oral_bioavailability": 8,
+      "selectivity_window": 6,
+      "safety_toxicology": 5,
+      "clinical_validation": 9.0,
+      "patent_space": 9.3,
+      "competitive_landscape": "激烈"
+    },
+    "KRAS": {
+      "gene": "KRAS",
+      "target_class": "未知",
+      "target_type": "未知",
+      "total_score": 4.1,
+      "antibody_score": 3,
+      "small_mol_score": 4.3,
+      "protac_score": 3,
+      "structure_resolution": 5,
+      "binding_pocket": 4,
+      "lipinski_compliance": 5,
+      "oral_bioavailability": 4,
+      "selectivity_window": 5,
+      "safety_toxicology": 5,
+      "clinical_validation": 3.0,
+      "patent_space": 5.1,
+      "competitive_landscape": "蓝海"
+    },
+    "CDKN2A": {
+      "gene": "CDKN2A",
+      "target_class": "未知",
+      "target_type": "未知",
+      "total_score": 4.1,
+      "antibody_score": 3,
+      "small_mol_score": 4.3,
+      "protac_score": 3,
+      "structure_resolution": 5,
+      "binding_pocket": 4,
+      "lipinski_compliance": 5,
+      "oral_bioavailability": 4,
+      "selectivity_window": 5,
+      "safety_toxicology": 5,
+      "clinical_validation": 3.0,
+      "patent_space": 5.1,
+      "competitive_landscape": "蓝海"
+    },
+    "WNT": {
+      "gene": "WNT",
+      "target_class": "未知",
+      "target_type": "未知",
+      "total_score": 4.1,
+      "antibody_score": 3,
+      "small_mol_score": 4.3,
+      "protac_score": 3,
+      "structure_resolution": 5,
+      "binding_pocket": 4,
+      "lipinski_compliance": 5,
+      "oral_bioavailability": 4,
+      "selectivity_window": 5,
+      "safety_toxicology": 5,
+      "clinical_validation": 3.0,
+      "patent_space": 5.1,
+      "competitive_landscape": "蓝海"
+    }
+  },
+  "top_combinations": [
+    {
+      "genes": [
+        "TP53",
+        "EGFR",
+        "KRAS"
+      ],
+      "avg_druggability": 5.0,
+      "avg_centrality": 0.93,
+      "coverage": 0.3333333333333333,
+      "combo_score": 3.24,
+      "modality_penalty": 1.0,
+      "synergy_bonus": 1.0,
+      "recommended_modality": "单/双/三特异性抗体"
+    },
+    {
+      "genes": [
+        "TP53",
+        "EGFR",
+        "CDKN2A"
+      ],
+      "avg_druggability": 5.0,
+      "avg_centrality": 0.9,
+      "coverage": 0.3333333333333333,
+      "combo_score": 3.16,
+      "modality_penalty": 1.0,
+      "synergy_bonus": 1.0,
+      "recommended_modality": "单/双/三特异性抗体"
+    },
+    {
+      "genes": [
+        "EGFR",
+        "KRAS",
+        "CDKN2A"
+      ],
+      "avg_druggability": 5.0,
+      "avg_centrality": 0.86,
+      "coverage": 0.3333333333333333,
+      "combo_score": 3.14,
+      "modality_penalty": 1.0,
+      "synergy_bonus": 1.0,
+      "recommended_modality": "单/双/三特异性抗体"
+    },
+    {
+      "genes": [
+        "TP53",
+        "EGFR",
+        "WNT"
+      ],
+      "avg_druggability": 5.0,
+      "avg_centrality": 0.8,
+      "coverage": 0.3333333333333333,
+      "combo_score": 3.08,
+      "modality_penalty": 1.0,
+      "synergy_bonus": 1.0,
+      "recommended_modality": "单/双/三特异性抗体"
+    },
+    {
+      "genes": [
+        "EGFR",
+        "KRAS",
+        "WNT"
+      ],
+      "avg_druggability": 5.0,
+      "avg_centrality": 0.77,
+      "coverage": 0.3333333333333333,
+      "combo_score": 3.07,
+      "modality_penalty": 1.0,
+      "synergy_bonus": 1.0,
+      "recommended_modality": "单/双/三特异性抗体"
+    }
+  ],
+  "environment": {
+    "python": "3.11.9",
+    "scgpt_available": true,
+    "geneformer_available": true,
+    "models_available": [
+      "evo2",
+      "state",
+      "alphagenome"
+    ]
+  },
+  "multi_model_validation": {
+    "target_scores": {
+      "TP53": {
+        "gene": "TP53",
+        "per_model_scores": {
+          "evo2": {
+            "conservation_estimate": 5.5,
+            "sequence_complexity": 1.39,
+            "regulatory_potential": 3.5
+          },
+          "state": {
+            "n_downstream_genes": 10,
+            "pathway_effects": [
+              "Apoptosis",
+              "Cell_cycle_arrest",
+              "DNA_repair"
+            ],
+            "network_centrality": 0.5
+          },
+          "alphagenome": {
+            "regulatory_score": 0.66,
+            "conservation_estimate": 4.2,
+            "functional_constraint": 4.6,
+            "druggability_relevance": 5.3
+          }
+        },
+        "consensus_score": 4.2,
+        "models_used": [
+          "evo2",
+          "state",
+          "alphagenome"
+        ],
+        "n_models": 3
+      },
+      "EGFR": {
+        "gene": "EGFR",
+        "per_model_scores": {
+          "evo2": {
+            "conservation_estimate": 5.5,
+            "sequence_complexity": 1.39,
+            "regulatory_potential": 3.5
+          },
+          "state": {
+            "n_downstream_genes": 1,
+            "pathway_effects": [
+              "Unknown_pathway"
+            ],
+            "network_centrality": 0.05
+          },
+          "alphagenome": {
+            "regulatory_score": 0.66,
+            "conservation_estimate": 4.2,
+            "functional_constraint": 4.6,
+            "druggability_relevance": 5.3
+          }
+        },
+        "consensus_score": 2.5,
+        "models_used": [
+          "evo2",
+          "state",
+          "alphagenome"
+        ],
+        "n_models": 3
+      },
+      "KRAS": {
+        "gene": "KRAS",
+        "per_model_scores": {
+          "evo2": {
+            "conservation_estimate": 5.5,
+            "sequence_complexity": 1.39,
+            "regulatory_potential": 3.5
+          },
+          "state": {
+            "n_downstream_genes": 1,
+            "pathway_effects": [
+              "Unknown_pathway"
+            ],
+            "network_centrality": 0.05
+          },
+          "alphagenome": {
+            "regulatory_score": 0.66,
+            "conservation_estimate": 4.2,
+            "functional_constraint": 4.6,
+            "druggability_relevance": 5.3
+          }
+        },
+        "consensus_score": 2.5,
+        "models_used": [
+          "evo2",
+          "state",
+          "alphagenome"
+        ],
+        "n_models": 3
+      }
+    },
+    "synergy_analysis": {
+      "targets": [
+        "TP53",
+        "EGFR",
+        "KRAS"
+      ],
+      "per_model_analysis": {
+        "state": {
+          "targets": [
+            "TP53",
+            "EGFR",
+            "KRAS"
+          ],
+          "pairwise_synergy": [
+            {
+              "pair": "TP53+EGFR",
+              "shared_targets": 0,
+              "jaccard_index": 0.0,
+              "same_pathway": null,
+              "synergy_level": "low"
+            },
+            {
+              "pair": "TP53+KRAS",
+              "shared_targets": 0,
+              "jaccard_index": 0.0,
+              "same_pathway": null,
+              "synergy_level": "low"
+            },
+            {
+              "pair": "EGFR+KRAS",
+              "shared_targets": 0,
+              "jaccard_index": 0.0,
+              "same_pathway": null,
+              "synergy_level": "low"
+            }
+          ],
+          "overall_synergy_score": 0.0,
+          "n_high_synergy_pairs": 0,
+          "mode": "heuristic"
+        },
+        "state_multi": {
+          "synergy_score": 0.0,
+          "synergy_level": "low",
+          "n_synergy_genes": 0,
+          "top_synergy_genes": []
+        },
+        "evo2": {
+          "genomic_diversity": 0.0,
+          "synergy_potential": "low"
+        },
+        "alphagenome": {
+          "regulatory_profiles": [
+            {
+              "gene": "TP53",
+              "gc": 0.5,
+              "cpg_island": false,
+              "tfs": 0
+            },
+            {
+              "gene": "EGFR",
+              "gc": 0.5,
+              "cpg_island": false,
+              "tfs": 0
+            },
+            {
+              "gene": "KRAS",
+              "gc": 0.5,
+              "cpg_island": false,
+              "tfs": 0
+            }
+          ]
+        }
+      },
+      "consensus_synergy": 0.0,
+      "models_used": [
+        "state",
+        "state_multi",
+        "evo2",
+        "alphagenome"
+      ]
+    },
+    "recommendation": {
+      "disease": "胰腺癌",
+      "targets": [
+        "TP53",
+        "EGFR",
+        "KRAS"
+      ],
+      "n_models_used": 3,
+      "avg_target_score": 3.1,
+      "synergy_score": 0.0,
+      "score_variance": 0.64,
+      "confidence": "exploratory",
+      "recommended_modality": "抗体-小分子联合策略 (Combination Therapy) — 推荐层级验证策略",
+      "models_contributing": [
+        "evo2",
+        "state",
+        "alphagenome"
+      ]
+    }
+  }
+}

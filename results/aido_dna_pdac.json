@@ -1,0 +1,908 @@
+{
+ "meta": {
+  "model": "AIDO.DNA-300M",
+  "hf_repo": "genbio-ai/AIDO.DNA-300M",
+  "architecture": "RNABert (GenBioBERT): 24 layers, hidden 1024, RoPE, 4000-token context",
+  "usage": "zero-shot embedding extraction; no fine-tuning, no labels, no gradients",
+  "promoter_definition": "TSS-2000..TSS, strand-aware, Ensembl REST GRCh38",
+  "readout": "cosine(mean final-layer nucleotide embedding, E6 centroid)",
+  "scored_universe_genes": 20751,
+  "seed": 42,
+  "generated": "2026-08-18T16:22:53",
+  "device": "mps",
+  "weights_dir": "/Users/zuoxianbo/Desktop/zuoxb-\u865a\u62df\u79d1\u7814\u7cfb\u7edf-MAC/Zuoxb-Data-Medicine-platform/models/AIDO.DNA-300M",
+  "stubbed_side_dependencies": [
+   "bionty"
+  ],
+  "hidden_size": 1024
+ },
+ "groups": {
+  "E6_clinical_reference": {
+   "n_requested": 35,
+   "genes": [
+    "ATM",
+    "AURKA",
+    "BCL2",
+    "BRCA1",
+    "BRCA2",
+    "CDK1",
+    "CDK4",
+    "CDKN2A",
+    "CSF1R",
+    "CTLA4",
+    "CXCR4",
+    "EGFR",
+    "ERBB2",
+    "FGFR1",
+    "GATA6",
+    "IDH1",
+    "IDH2",
+    "KRAS",
+    "MAP2K1",
+    "MAPK1",
+    "MET",
+    "MTOR",
+    "MYC",
+    "PARP1",
+    "PIK3CA",
+    "PLK1",
+    "PXN",
+    "RRM1",
+    "SMAD4",
+    "SRC",
+    "STK11",
+    "TGFB1",
+    "TOP1",
+    "TP53",
+    "TYMS"
+   ]
+  },
+  "ECS_specific": {
+   "n_requested": 30,
+   "genes": [
+    "KPNA2",
+    "RSAD1",
+    "CENPA",
+    "IL18",
+    "MRPL19",
+    "ALDH7A1",
+    "DRG1",
+    "SNRPD1",
+    "ARF6",
+    "IFI35",
+    "PRDX3",
+    "RPS27L",
+    "CALM2",
+    "MT-CYB",
+    "NIP7",
+    "KRT18",
+    "UBE2T",
+    "MT-CO2",
+    "ADAM10",
+    "OASL",
+    "VAMP2",
+    "RAB7A",
+    "NUP107",
+    "HNRNPA3",
+    "ITGA2B",
+    "FOXA2",
+    "PPIA",
+    "H3C10",
+    "EIF1",
+    "CDC25C"
+   ]
+  },
+  "housekeeping_control": {
+   "n_requested": 6,
+   "genes": [
+    "GAPDH",
+    "ACTB",
+    "RPL13A",
+    "TBP",
+    "PPIA",
+    "B2M"
+   ]
+  },
+  "random_background": {
+   "n_requested": 30,
+   "genes": [
+    "CPT1B",
+    "AP3B2",
+    "LDLRAP1",
+    "IL17F",
+    "H4C4",
+    "DNASE1L2",
+    "CMC2",
+    "TRAJ6",
+    "CDYL",
+    "ZNF101",
+    "RAB4A",
+    "ARL6",
+    "ARHGAP8",
+    "CHD2",
+    "GSX2",
+    "HOXA9",
+    "STX8",
+    "ZNF689",
+    "APOBEC3C",
+    "UBE2F",
+    "GAS6",
+    "TRAJ31",
+    "QDPR",
+    "GYG1",
+    "RXRB",
+    "ZHX2",
+    "LIN54",
+    "ACTL6B",
+    "ENSG00000285043",
+    "RABGGTB"
+   ]
+  }
+ },
+ "promoters_failed": {
+  "ENSG00000285043": "/lookup/symbol/homo_sapiens/ENSG00000285043: HTTP Error 400: Bad Request"
+ },
+ "per_gene": {
+  "TP53": {
+   "group": "E6_clinical_reference",
+   "region": "17:7687546:7689546:-1",
+   "len": 2001,
+   "gc": 0.5282,
+   "cos_to_E6_centroid": NaN
+  },
+  "EGFR": {
+   "group": "E6_clinical_reference",
+   "region": "7:55016820:55018820:1",
+   "len": 2001,
+   "gc": 0.4983,
+   "cos_to_E6_centroid": NaN
+  },
+  "KRAS": {
+   "group": "E6_clinical_reference",
+   "region": "12:25326473:25328473:-1",
+   "len": 2001,
+   "gc": 0.3498,
+   "cos_to_E6_centroid": NaN
+  },
+  "KPNA2": {
+   "group": "ECS_specific",
+   "region": "17:68033517:68035517:1",
+   "len": 2001,
+   "gc": 0.4128,
+   "cos_to_E6_centroid": NaN
+  },
+  "CENPA": {
+   "group": "ECS_specific",
+   "region": "2:26762289:26764289:1",
+   "len": 2001,
+   "gc": 0.5152,
+   "cos_to_E6_centroid": NaN
+  },
+  "GAPDH": {
+   "group": "housekeeping_control",
+   "region": "12:6532012:6534012:1",
+   "len": 2001,
+   "gc": 0.6017,
+   "cos_to_E6_centroid": NaN
+  },
+  "ACTB": {
+   "group": "housekeeping_control",
+   "region": "7:5563902:5565902:-1",
+   "len": 2001,
+   "gc": 0.5022,
+   "cos_to_E6_centroid": NaN
+  },
+  "ATM": {
+   "group": "E6_clinical_reference",
+   "region": "11:108220788..108222788:1",
+   "len": 2001,
+   "gc": 0.4628,
+   "cos_to_E6_centroid": NaN
+  },
+  "AURKA": {
+   "group": "E6_clinical_reference",
+   "region": "20:56392566..56394566:-1",
+   "len": 2001,
+   "gc": 0.4828,
+   "cos_to_E6_centroid": NaN
+  },
+  "BCL2": {
+   "group": "E6_clinical_reference",
+   "region": "18:63320215..63322215:-1",
+   "len": 2001,
+   "gc": 0.5542,
+   "cos_to_E6_centroid": NaN
+  },
+  "BRCA1": {
+   "group": "E6_clinical_reference",
+   "region": "17:43170245..43172245:-1",
+   "len": 2001,
+   "gc": 0.5082,
+   "cos_to_E6_centroid": NaN
+  },
+  "BRCA2": {
+   "group": "E6_clinical_reference",
+   "region": "13:32313086..32315086:1",
+   "len": 2001,
+   "gc": 0.4413,
+   "cos_to_E6_centroid": NaN
+  },
+  "CDK1": {
+   "group": "E6_clinical_reference",
+   "region": "10:60776312..60778312:1",
+   "len": 2001,
+   "gc": 0.3818,
+   "cos_to_E6_centroid": NaN
+  },
+  "CDK4": {
+   "group": "E6_clinical_reference",
+   "region": "12:57756013..57758013:-1",
+   "len": 2001,
+   "gc": 0.5007,
+   "cos_to_E6_centroid": NaN
+  },
+  "CDKN2A": {
+   "group": "E6_clinical_reference",
+   "region": "9:21995301..21997301:-1",
+   "len": 2001,
+   "gc": 0.5327,
+   "cos_to_E6_centroid": NaN
+  },
+  "CSF1R": {
+   "group": "E6_clinical_reference",
+   "region": "5:150113372..150115372:-1",
+   "len": 2001,
+   "gc": 0.5567,
+   "cos_to_E6_centroid": NaN
+  },
+  "CTLA4": {
+   "group": "E6_clinical_reference",
+   "region": "2:203851888..203853888:1",
+   "len": 2001,
+   "gc": 0.3893,
+   "cos_to_E6_centroid": NaN
+  },
+  "CXCR4": {
+   "group": "E6_clinical_reference",
+   "region": "2:136119177..136121177:-1",
+   "len": 2001,
+   "gc": 0.4203,
+   "cos_to_E6_centroid": NaN
+  },
+  "ERBB2": {
+   "group": "E6_clinical_reference",
+   "region": "17:39685914..39687914:1",
+   "len": 2001,
+   "gc": 0.4813,
+   "cos_to_E6_centroid": NaN
+  },
+  "FGFR1": {
+   "group": "E6_clinical_reference",
+   "region": "8:38468834..38470834:-1",
+   "len": 2001,
+   "gc": 0.4793,
+   "cos_to_E6_centroid": NaN
+  },
+  "GATA6": {
+   "group": "E6_clinical_reference",
+   "region": "18:22166837..22168837:1",
+   "len": 2001,
+   "gc": 0.4983,
+   "cos_to_E6_centroid": NaN
+  },
+  "IDH1": {
+   "group": "E6_clinical_reference",
+   "region": "2:208266095..208268095:-1",
+   "len": 2001,
+   "gc": 0.5072,
+   "cos_to_E6_centroid": NaN
+  },
+  "IDH2": {
+   "group": "E6_clinical_reference",
+   "region": "15:90102511..90104511:-1",
+   "len": 2001,
+   "gc": 0.5372,
+   "cos_to_E6_centroid": NaN
+  },
+  "MAP2K1": {
+   "group": "E6_clinical_reference",
+   "region": "15:66384816..66386816:1",
+   "len": 2001,
+   "gc": 0.4988,
+   "cos_to_E6_centroid": NaN
+  },
+  "MAPK1": {
+   "group": "E6_clinical_reference",
+   "region": "22:21867680..21869680:-1",
+   "len": 2001,
+   "gc": 0.4983,
+   "cos_to_E6_centroid": NaN
+  },
+  "MET": {
+   "group": "E6_clinical_reference",
+   "region": "7:116670051..116672051:1",
+   "len": 2001,
+   "gc": 0.3943,
+   "cos_to_E6_centroid": NaN
+  },
+  "MTOR": {
+   "group": "E6_clinical_reference",
+   "region": "1:11262556..11264556:-1",
+   "len": 2001,
+   "gc": 0.4683,
+   "cos_to_E6_centroid": NaN
+  },
+  "MYC": {
+   "group": "E6_clinical_reference",
+   "region": "8:127733434..127735434:1",
+   "len": 2001,
+   "gc": 0.4928,
+   "cos_to_E6_centroid": NaN
+  },
+  "PARP1": {
+   "group": "E6_clinical_reference",
+   "region": "1:226408154..226410154:-1",
+   "len": 2001,
+   "gc": 0.4888,
+   "cos_to_E6_centroid": NaN
+  },
+  "PIK3CA": {
+   "group": "E6_clinical_reference",
+   "region": "3:179146114..179148114:1",
+   "len": 2001,
+   "gc": 0.4288,
+   "cos_to_E6_centroid": NaN
+  },
+  "PLK1": {
+   "group": "E6_clinical_reference",
+   "region": "16:23675656..23677656:1",
+   "len": 2001,
+   "gc": 0.4608,
+   "cos_to_E6_centroid": NaN
+  },
+  "PXN": {
+   "group": "E6_clinical_reference",
+   "region": "12:120265800..120267800:-1",
+   "len": 2001,
+   "gc": 0.5112,
+   "cos_to_E6_centroid": NaN
+  },
+  "RRM1": {
+   "group": "E6_clinical_reference",
+   "region": "11:4092707..4094707:1",
+   "len": 2001,
+   "gc": 0.4833,
+   "cos_to_E6_centroid": NaN
+  },
+  "SMAD4": {
+   "group": "E6_clinical_reference",
+   "region": "18:51026528..51028528:1",
+   "len": 2001,
+   "gc": 0.4478,
+   "cos_to_E6_centroid": NaN
+  },
+  "SRC": {
+   "group": "E6_clinical_reference",
+   "region": "20:37342673..37344673:1",
+   "len": 2001,
+   "gc": 0.5287,
+   "cos_to_E6_centroid": NaN
+  },
+  "STK11": {
+   "group": "E6_clinical_reference",
+   "region": "19:1175558..1177558:1",
+   "len": 2001,
+   "gc": 0.5187,
+   "cos_to_E6_centroid": NaN
+  },
+  "TGFB1": {
+   "group": "E6_clinical_reference",
+   "region": "19:41353961..41355961:-1",
+   "len": 2001,
+   "gc": 0.5887,
+   "cos_to_E6_centroid": NaN
+  },
+  "TOP1": {
+   "group": "E6_clinical_reference",
+   "region": "20:41026815..41028815:1",
+   "len": 2001,
+   "gc": 0.5107,
+   "cos_to_E6_centroid": NaN
+  },
+  "TYMS": {
+   "group": "E6_clinical_reference",
+   "region": "18:655127..657127:1",
+   "len": 2001,
+   "gc": 0.4658,
+   "cos_to_E6_centroid": NaN
+  },
+  "RSAD1": {
+   "group": "ECS_specific",
+   "region": "17:50476770..50478770:1",
+   "len": 2001,
+   "gc": 0.5487,
+   "cos_to_E6_centroid": NaN
+  },
+  "IL18": {
+   "group": "ECS_specific",
+   "region": "11:112164391..112166391:-1",
+   "len": 2001,
+   "gc": 0.3333,
+   "cos_to_E6_centroid": NaN
+  },
+  "MRPL19": {
+   "group": "ECS_specific",
+   "region": "2:75644777..75646777:1",
+   "len": 2001,
+   "gc": 0.4558,
+   "cos_to_E6_centroid": NaN
+  },
+  "ALDH7A1": {
+   "group": "ECS_specific",
+   "region": "5:126595362..126597362:-1",
+   "len": 2001,
+   "gc": 0.4913,
+   "cos_to_E6_centroid": NaN
+  },
+  "DRG1": {
+   "group": "ECS_specific",
+   "region": "22:31397515..31399515:1",
+   "len": 2001,
+   "gc": 0.4743,
+   "cos_to_E6_centroid": NaN
+  },
+  "SNRPD1": {
+   "group": "ECS_specific",
+   "region": "18:21610266..21612266:1",
+   "len": 2001,
+   "gc": 0.5097,
+   "cos_to_E6_centroid": NaN
+  },
+  "ARF6": {
+   "group": "ECS_specific",
+   "region": "14:49890608..49892608:1",
+   "len": 2001,
+   "gc": 0.4463,
+   "cos_to_E6_centroid": NaN
+  },
+  "IFI35": {
+   "group": "ECS_specific",
+   "region": "17:43004740..43006740:1",
+   "len": 2001,
+   "gc": 0.4903,
+   "cos_to_E6_centroid": NaN
+  },
+  "PRDX3": {
+   "group": "ECS_specific",
+   "region": "10:119178865..119180865:-1",
+   "len": 2001,
+   "gc": 0.4518,
+   "cos_to_E6_centroid": NaN
+  },
+  "RPS27L": {
+   "group": "ECS_specific",
+   "region": "15:63158021..63160021:-1",
+   "len": 2001,
+   "gc": 0.4418,
+   "cos_to_E6_centroid": NaN
+  },
+  "CALM2": {
+   "group": "ECS_specific",
+   "region": "2:47176921..47178921:-1",
+   "len": 2001,
+   "gc": 0.4278,
+   "cos_to_E6_centroid": NaN
+  },
+  "MT-CYB": {
+   "group": "ECS_specific",
+   "region": "MT:12747..14747:1",
+   "len": 2001,
+   "gc": 0.4518,
+   "cos_to_E6_centroid": NaN
+  },
+  "NIP7": {
+   "group": "ECS_specific",
+   "region": "16:69335996..69337996:1",
+   "len": 2001,
+   "gc": 0.4463,
+   "cos_to_E6_centroid": NaN
+  },
+  "KRT18": {
+   "group": "ECS_specific",
+   "region": "12:52943688..52945688:1",
+   "len": 2001,
+   "gc": 0.5372,
+   "cos_to_E6_centroid": NaN
+  },
+  "UBE2T": {
+   "group": "ECS_specific",
+   "region": "1:202341984..202343984:-1",
+   "len": 2001,
+   "gc": 0.4213,
+   "cos_to_E6_centroid": NaN
+  },
+  "MT-CO2": {
+   "group": "ECS_specific",
+   "region": "MT:5586..7586:1",
+   "len": 2001,
+   "gc": 0.4553,
+   "cos_to_E6_centroid": NaN
+  },
+  "ADAM10": {
+   "group": "ECS_specific",
+   "region": "15:58749871..58751871:-1",
+   "len": 2001,
+   "gc": 0.4518,
+   "cos_to_E6_centroid": NaN
+  },
+  "OASL": {
+   "group": "ECS_specific",
+   "region": "12:121039246..121041246:-1",
+   "len": 2001,
+   "gc": 0.4838,
+   "cos_to_E6_centroid": NaN
+  },
+  "VAMP2": {
+   "group": "ECS_specific",
+   "region": "17:8163584..8165584:-1",
+   "len": 2001,
+   "gc": 0.5422,
+   "cos_to_E6_centroid": NaN
+  },
+  "RAB7A": {
+   "group": "ECS_specific",
+   "region": "3:128691669..128693669:1",
+   "len": 2001,
+   "gc": 0.4758,
+   "cos_to_E6_centroid": NaN
+  },
+  "NUP107": {
+   "group": "ECS_specific",
+   "region": "12:68684951..68686951:1",
+   "len": 2001,
+   "gc": 0.4448,
+   "cos_to_E6_centroid": NaN
+  },
+  "HNRNPA3": {
+   "group": "ECS_specific",
+   "region": "2:177210587..177212587:1",
+   "len": 2001,
+   "gc": 0.4323,
+   "cos_to_E6_centroid": NaN
+  },
+  "ITGA2B": {
+   "group": "ECS_specific",
+   "region": "17:44389649..44391649:-1",
+   "len": 2001,
+   "gc": 0.4518,
+   "cos_to_E6_centroid": NaN
+  },
+  "FOXA2": {
+   "group": "ECS_specific",
+   "region": "20:22585498..22587498:-1",
+   "len": 2001,
+   "gc": 0.5722,
+   "cos_to_E6_centroid": NaN
+  },
+  "PPIA": {
+   "group": "housekeeping_control",
+   "region": "7:44794620..44796620:1",
+   "len": 2001,
+   "gc": 0.5517,
+   "cos_to_E6_centroid": NaN
+  },
+  "H3C10": {
+   "group": "ECS_specific",
+   "region": "6:27808051..27810051:1",
+   "len": 2001,
+   "gc": 0.4073,
+   "cos_to_E6_centroid": NaN
+  },
+  "EIF1": {
+   "group": "ECS_specific",
+   "region": "17:41686883..41688883:1",
+   "len": 2001,
+   "gc": 0.5037,
+   "cos_to_E6_centroid": NaN
+  },
+  "CDC25C": {
+   "group": "ECS_specific",
+   "region": "5:138338355..138340355:-1",
+   "len": 2001,
+   "gc": 0.5147,
+   "cos_to_E6_centroid": NaN
+  },
+  "RPL13A": {
+   "group": "housekeeping_control",
+   "region": "19:49485510..49487510:1",
+   "len": 2001,
+   "gc": 0.5552,
+   "cos_to_E6_centroid": NaN
+  },
+  "TBP": {
+   "group": "housekeeping_control",
+   "region": "6:170552266..170554266:1",
+   "len": 2001,
+   "gc": 0.4583,
+   "cos_to_E6_centroid": NaN
+  },
+  "B2M": {
+   "group": "housekeeping_control",
+   "region": "15:44709253..44711253:1",
+   "len": 2001,
+   "gc": 0.4018,
+   "cos_to_E6_centroid": NaN
+  },
+  "CPT1B": {
+   "group": "random_background",
+   "region": "22:50578681..50580681:-1",
+   "len": 2001,
+   "gc": 0.5532,
+   "cos_to_E6_centroid": NaN
+  },
+  "AP3B2": {
+   "group": "random_background",
+   "region": "15:82710112..82712112:-1",
+   "len": 2001,
+   "gc": 0.5872,
+   "cos_to_E6_centroid": NaN
+  },
+  "LDLRAP1": {
+   "group": "random_background",
+   "region": "1:25541550..25543550:1",
+   "len": 2001,
+   "gc": 0.5242,
+   "cos_to_E6_centroid": NaN
+  },
+  "IL17F": {
+   "group": "random_background",
+   "region": "6:52245689..52247689:-1",
+   "len": 2001,
+   "gc": 0.4713,
+   "cos_to_E6_centroid": NaN
+  },
+  "H4C4": {
+   "group": "random_background",
+   "region": "6:26189112..26191112:-1",
+   "len": 2001,
+   "gc": 0.4178,
+   "cos_to_E6_centroid": NaN
+  },
+  "DNASE1L2": {
+   "group": "random_background",
+   "region": "16:2233816..2235816:1",
+   "len": 2001,
+   "gc": 0.6592,
+   "cos_to_E6_centroid": NaN
+  },
+  "CMC2": {
+   "group": "random_background",
+   "region": "16:81020270..81022270:-1",
+   "len": 2001,
+   "gc": 0.4308,
+   "cos_to_E6_centroid": NaN
+  },
+  "TRAJ6": {
+   "group": "random_background",
+   "region": "14:22537073..22539073:1",
+   "len": 2001,
+   "gc": 0.4973,
+   "cos_to_E6_centroid": NaN
+  },
+  "CDYL": {
+   "group": "random_background",
+   "region": "6:4704159..4706159:1",
+   "len": 2001,
+   "gc": 0.4663,
+   "cos_to_E6_centroid": NaN
+  },
+  "ZNF101": {
+   "group": "random_background",
+   "region": "19:19666781..19668781:1",
+   "len": 2001,
+   "gc": 0.5132,
+   "cos_to_E6_centroid": NaN
+  },
+  "RAB4A": {
+   "group": "random_background",
+   "region": "1:229269062..229271062:1",
+   "len": 2001,
+   "gc": 0.4843,
+   "cos_to_E6_centroid": NaN
+  },
+  "ARL6": {
+   "group": "random_background",
+   "region": "3:97762521..97764521:1",
+   "len": 2001,
+   "gc": 0.4163,
+   "cos_to_E6_centroid": NaN
+  },
+  "ARHGAP8": {
+   "group": "random_background",
+   "region": "22:44750547..44752547:1",
+   "len": 2001,
+   "gc": 0.5097,
+   "cos_to_E6_centroid": NaN
+  },
+  "CHD2": {
+   "group": "random_background",
+   "region": "15:92884203..92886203:1",
+   "len": 2001,
+   "gc": 0.3038,
+   "cos_to_E6_centroid": NaN
+  },
+  "GSX2": {
+   "group": "random_background",
+   "region": "4:54097523..54099523:1",
+   "len": 2001,
+   "gc": 0.4858,
+   "cos_to_E6_centroid": NaN
+  },
+  "HOXA9": {
+   "group": "random_background",
+   "region": "7:27175180..27177180:-1",
+   "len": 2001,
+   "gc": 0.5607,
+   "cos_to_E6_centroid": NaN
+  },
+  "STX8": {
+   "group": "random_background",
+   "region": "17:9576591..9578591:-1",
+   "len": 2001,
+   "gc": 0.4813,
+   "cos_to_E6_centroid": NaN
+  },
+  "ZNF689": {
+   "group": "random_background",
+   "region": "16:30624012..30626012:-1",
+   "len": 2001,
+   "gc": 0.5192,
+   "cos_to_E6_centroid": NaN
+  },
+  "APOBEC3C": {
+   "group": "random_background",
+   "region": "22:39012163..39014163:1",
+   "len": 2001,
+   "gc": 0.4968,
+   "cos_to_E6_centroid": NaN
+  },
+  "UBE2F": {
+   "group": "random_background",
+   "region": "2:237964827..237966827:1",
+   "len": 2001,
+   "gc": 0.5327,
+   "cos_to_E6_centroid": NaN
+  },
+  "GAS6": {
+   "group": "random_background",
+   "region": "13:113864123..113866123:-1",
+   "len": 2001,
+   "gc": 0.4828,
+   "cos_to_E6_centroid": NaN
+  },
+  "TRAJ31": {
+   "group": "random_background",
+   "region": "14:22508968..22510968:1",
+   "len": 2001,
+   "gc": 0.4358,
+   "cos_to_E6_centroid": NaN
+  },
+  "QDPR": {
+   "group": "random_background",
+   "region": "4:17512257..17514257:-1",
+   "len": 2001,
+   "gc": 0.4338,
+   "cos_to_E6_centroid": NaN
+  },
+  "GYG1": {
+   "group": "random_background",
+   "region": "3:148989332..148991332:1",
+   "len": 2001,
+   "gc": 0.4078,
+   "cos_to_E6_centroid": NaN
+  },
+  "RXRB": {
+   "group": "random_background",
+   "region": "6:33200693..33202693:-1",
+   "len": 2001,
+   "gc": 0.5427,
+   "cos_to_E6_centroid": NaN
+  },
+  "ZHX2": {
+   "group": "random_background",
+   "region": "8:122779298..122781298:1",
+   "len": 2001,
+   "gc": 0.5557,
+   "cos_to_E6_centroid": NaN
+  },
+  "LIN54": {
+   "group": "random_background",
+   "region": "4:83012991..83014991:-1",
+   "len": 2001,
+   "gc": 0.4428,
+   "cos_to_E6_centroid": NaN
+  },
+  "ACTL6B": {
+   "group": "random_background",
+   "region": "7:100656458..100658458:-1",
+   "len": 2001,
+   "gc": 0.5127,
+   "cos_to_E6_centroid": NaN
+  },
+  "RABGGTB": {
+   "group": "random_background",
+   "region": "1:75784171..75786171:1",
+   "len": 2001,
+   "gc": 0.4693,
+   "cos_to_E6_centroid": NaN
+  }
+ },
+ "group_stats": {
+  "E6_clinical_reference": {
+   "n_embedded": 35,
+   "cos_mean": NaN,
+   "cos_sd": NaN,
+   "cos_median": NaN,
+   "gc_mean": 0.4827
+  },
+  "ECS_specific": {
+   "n_embedded": 29,
+   "cos_mean": NaN,
+   "cos_sd": NaN,
+   "cos_median": NaN,
+   "gc_mean": 0.4687
+  },
+  "housekeeping_control": {
+   "n_embedded": 6,
+   "cos_mean": NaN,
+   "cos_sd": NaN,
+   "cos_median": NaN,
+   "gc_mean": 0.5118
+  },
+  "random_background": {
+   "n_embedded": 29,
+   "cos_mean": NaN,
+   "cos_sd": NaN,
+   "cos_median": NaN,
+   "gc_mean": 0.4895
+  }
+ },
+ "tests": {
+  "ECS_vs_housekeeping": {
+   "n1": 29,
+   "n2": 6,
+   "U": NaN,
+   "p_two_sided": NaN,
+   "median_diff": NaN
+  },
+  "ECS_vs_random": {
+   "n1": 29,
+   "n2": 29,
+   "U": NaN,
+   "p_two_sided": NaN,
+   "median_diff": NaN
+  },
+  "housekeeping_vs_random": {
+   "n1": 6,
+   "n2": 29,
+   "U": NaN,
+   "p_two_sided": NaN,
+   "median_diff": NaN
+  },
+  "gc_confounder_spearman": {
+   "n": 64,
+   "rho": NaN,
+   "p": NaN,
+   "interpretation": "association between promoter GC content and similarity to the E6 centroid"
+  }
+ },
+ "status": "ok",
+ "error": null,
+ "honest_notes": [
+  "Promoter sequences are real Ensembl GRCh38 regions; coordinates are recorded per gene.",
+  "AIDO.DNA-300M is used zero-shot: it was never fine-tuned on PDAC and never saw any endpoint label.",
+  "The E6 reference set is disjoint from every test/control group, so no label leaks into the readout.",
+  "This is an exploratory sequence-level check; it does not enter ECS and does not affect any benchmark metric.",
+  "GC content is reported and tested because it is the dominant compositional confounder in promoters."
+ ]
+}
